@@ -1,0 +1,94 @@
+/* Skeleton Demo Styles */
+.skeleton-demo {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .demo-section {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+  }
+  
+  .demo-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .demo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .demo-item {
+    flex: 1 1 300px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .demo-item h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .demo-item.full-width {
+    flex: 1 1 100%;
+  }
+  
+  /* Profile card example styling */
+  .profile-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-body {
+    margin-bottom: 20px;
+  }
+  
+  .profile-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Button that toggles loading state */
+  .skeleton-demo > button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0;
+    font-weight: 600;
+  }
+  
+  .skeleton-demo > button:hover {
+    background-color: #357dcb;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .demo-item {
+      flex: 1 1 100%;
+    }
+  }

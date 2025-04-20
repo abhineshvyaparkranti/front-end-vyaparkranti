@@ -1,0 +1,42 @@
+.btn-style-ten-about-page {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 30px;
+    color: #ffffff;
+    padding: 15px 40px;
+    font-weight: 400;
+    overflow: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+    text-transform: capitalize;
+    background-color: #ff0500;
+    font-family: 'Archivo', sans-serif;
+}
+
+
+/* Hover effect - orange color */
+.btn-style-ten-about-page:hover {
+    background-color: #ff8c00;
+    color: #ffffff;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+    .btn-style-ten-about-page {
+        padding: 12px 30px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 480px) {
+    .btn-style-ten-about-page {
+        padding: 10px 20px;
+        font-size: 14px;
+        line-height: 22px;
+        width: 100%;
+        text-align: center;
+    }
+}

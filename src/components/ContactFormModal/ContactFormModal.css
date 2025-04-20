@@ -1,0 +1,151 @@
+ /* ContactFormModal.css */
+
+/* Button Styling */
+.cfm-btn-box {
+    margin: 15px 0;
+  }
+  
+  .cfm-theme-btn {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .cfm-btn-style-one {
+    background: #2b4eff;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 16px;
+    border: 2px solid #2b4eff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(43, 78, 255, 0.2);
+  }
+  
+  .cfm-btn-style-one:hover {
+    background: transparent;
+    color: #2b4eff;
+    box-shadow: 0 5px 20px rgba(43, 78, 255, 0.3);
+  }
+  
+  .cfm-txt {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Modal Styling */
+  .cfm-contact-modal .modal-content {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cfm-contact-modal .modal-header {
+    background-color: rgb(101, 46, 111);
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 20px 25px;
+    color: white;
+  }
+  
+  .cfm-contact-modal .modal-title {
+    color: #333;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  
+  .cfm-contact-modal .modal-body {
+    padding: 25px;
+  }
+  
+  .cfm-contact-modal .form-label {
+    font-weight: 500;
+    color: #495057;
+  }
+  
+  .cfm-contact-modal .form-control {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+  }
+  
+  .cfm-contact-modal .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(43, 78, 255, 0.25);
+    border-color: #2b4eff;
+  }
+  
+  /* Button Group */
+  .cfm-button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .cfm-cancel-btn {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    padding: 10px 25px;
+    border-radius: 5px;
+  }
+  
+  .cfm-submit-btn {
+    background-color: #2b4eff;
+    border-color: #2b4eff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    min-width: 120px;
+  }
+  
+  .cfm-submit-btn:hover {
+    background-color: #1a3ad9;
+    border-color: #1a3ad9;
+  }
+  
+  /* Thank You Message */
+  .cfm-thank-you-message {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+  
+  .cfm-thank-you-message h4 {
+    color: #155724;
+    margin-bottom: 15px;
+  }
+  
+  .cfm-thank-you-message p {
+    color: #155724;
+    margin-bottom: 0;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 767px) {
+    .cfm-btn-style-one {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    
+    .cfm-contact-modal .modal-title {
+      font-size: 20px;
+    }
+    
+    .cfm-button-group {
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+    
+    .cfm-submit-btn, .cfm-cancel-btn {
+      width: 100%;
+    }
+    
+    .cfm-contact-modal .modal-body {
+      padding: 15px;
+    }
+  }

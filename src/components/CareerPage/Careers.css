@@ -1,0 +1,126 @@
+/* Careers.css */
+.careers-page .section-padding {
+    padding: 80px 0;
+}
+
+.careers-page .bg-light {
+    background-color: #f8f9fa;
+}
+
+.careers-page .bg-theme {
+    background-color: #ff5e14;
+}
+
+.careers-page .theme-btn {
+    background-color: #ff5e14;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.careers-page .theme-btn:hover {
+    background-color: #e54d00;
+    color: #fff;
+}
+
+.careers-page .value-box {
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.careers-page .value-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.careers-page .value-box .icon {
+    margin-bottom: 20px;
+    color: #ff5e14;
+}
+
+.careers-page .value-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.careers-page .job-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.careers-page .job-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.careers-page .job-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.careers-page .job-meta {
+    margin-bottom: 15px;
+}
+
+.careers-page .job-meta span {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.careers-page .job-meta span i {
+    margin-right: 5px;
+    color: #ff5e14;
+}
+
+.careers-page .job-excerpt {
+    color: #666;
+    margin-bottom: 0;
+}
+
+.careers-page .job-details-content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+}
+
+.careers-page .application-form-wrapper {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+}
+
+.careers-page .section-title h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.careers-page .section-title p {
+    color: #666;
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .careers-page .job-meta span {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .careers-page .section-title h2 {
+        font-size: 28px;
+    }
+}
