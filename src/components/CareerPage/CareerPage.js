@@ -687,6 +687,41 @@ const CareerPage = () => {
                           onChange={handleInputChange}
                         />
                       </div>
+
+                      <div className="mb-3">
+                        <label htmlFor="department" className="form-label">Department *</label>
+                        <select
+                          className="form-control"
+                          id="department"
+                          name="department"
+                          value={formData.department}
+                          onChange={handleInputChange}
+                          required
+                        >
+                          <option value="">Select Department</option>
+                          <option value="Engineering">Engineering</option>
+                          <option value="Marketing">Marketing</option>
+                          <option value="Sales">Sales</option>
+                          <option value="HR">Human Resources</option>
+                          <option value="Design">Design</option>
+                          {/* Add sub-departments like Engineering -> Frontend, Backend via optgroups if needed */}
+                        </select>
+                      </div>
+
+                      <div className="mb-3">
+                        <label htmlFor="position" className="form-label">Position Applying For *</label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="position"
+                          name="position"
+                          value={formData.position}
+                          onChange={handleInputChange}
+                          placeholder="e.g. Frontend Developer"
+                          required
+                        />
+                      </div>
+
                       
                       <div className="mb-3">
                         <label htmlFor="resume" className="form-label">Resume/CV *</label>
@@ -701,6 +736,7 @@ const CareerPage = () => {
                         />
                         <div className="form-text">Accepted formats: PDF, DOC, DOCX</div>
                       </div>
+
                       
                       <div className="mb-3">
                         <label htmlFor="coverLetter" className="form-label">Cover Letter</label>

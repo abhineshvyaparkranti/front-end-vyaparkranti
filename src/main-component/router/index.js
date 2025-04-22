@@ -36,11 +36,13 @@ import ProjectRightPage from '../ProjectRightPage/ProjectRightPage';
 //import CareerPage from '../../components/CareerPage/CareerPage';
 import CareersPage from '../CareersPage/CareersPage';
 import Dashboard from '../../components/Dashboard/Dashboard';
-import BlogSingletest from '../BlogDetails/BlogSingletest';
+// import BlogSingletest from '../BlogDetails/BlogSingletest';
  
 import GalleryPage from '../GalleryPage/GalleryPage';
 import ContactFormModal from '../../components/ContactFormModal/ContactFormModal';
 import TechnologyPage from '../TechnologyPage/TechnologyPage';
+// import Faq from '../../components/Faq/Faq';
+// import PricingSinglePage from '../../components/Pricing/PricingSinglePage';
 
 
 const AllRoute = () => {
@@ -91,6 +93,10 @@ const AllRoute = () => {
           <Route path='/gallery' element={<GalleryPage />} />
           <Route path='/ContactFormModal' element={<ContactFormModal />} />
           <Route path='/technology' element={<TechnologyPage />} />
+          {/* <Route path='/package-page' element={<PricingSinglePage />} /> */}
+          <Route path='/package-page' element={<PricingPage />} />
+            {/* <Route path='/faq' element={<Faq />} /> */}
+
 
           {/* <Route path="/blog-single/:id" element={<BlogSingletest />} /> */}
 

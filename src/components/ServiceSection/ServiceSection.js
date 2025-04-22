@@ -513,6 +513,7 @@ const ServiceSection = (props) => {
 
     
     const displayServices = apiServices || Services;
+    const limitedServices = props.limit ? displayServices.slice(0, props.limit) : displayServices;
     console.log("Display Services Data ==============>", displayServices);
 
     return (
@@ -523,7 +524,7 @@ const ServiceSection = (props) => {
                     {/* Added 'row' class here for proper grid layout */}
                     <div className="row clearfix">
                         {loading ? (
-                            // Only render 6 skeletons with a more efficient loop
+                            
                             [...Array(6)].map((_, i) => (
                                 <div className="service-block-two style-two col-6 col-lg-4 col-md-6" key={i}>
                                     <div className="inner-box">
@@ -532,8 +533,10 @@ const ServiceSection = (props) => {
                                 </div>
                             ))
                         ) : (
-                            // Optimized rendering of services - col-6 ensures 2 per row on small screens
-                            displayServices.slice(0, 6).map((service, i) => (
+                            
+                            // displayServices.slice(0, 30).map((service, i) => (
+                                limitedServices.map((service, i) => (
+
                                 <div className="service-block-two style-two col-6 col-lg-4 col-md-6" key={i}>
                                     <div className="inner-box">
                                         <div className="color-layer"></div>
@@ -569,13 +572,16 @@ const ServiceSection = (props) => {
                         {error}
                     </div>
                 )}
-                <div className="lower-box"> 
-                    <div className="flex justify-center pt-8">
-                        <Link to="/services" className="theme-btn btn-style-ten">
-                            <span className="txt">View All</span>
-                        </Link>
+                {props.showViewAll && (
+                    <div className="lower-box"> 
+                        <div className="flex justify-center pt-8">
+                            <Link to="/services" className="theme-btn btn-style-ten">
+                                <span className="txt">View All</span>
+                            </Link>
+                        </div>
                     </div>
-                </div>
+                )}
+
             </div>
         </section>
     );

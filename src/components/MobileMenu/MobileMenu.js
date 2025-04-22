@@ -252,49 +252,49 @@ const menus = [
     // },
 
     
-    {
-        id: 5,
-        title: 'Blog',
-        link: '/blog',
-        // submenu: [
-        //     {
-        //         id: 51,
-        //         title: 'Our Blog',
-        //         link: '/blog'
-        //     },
-        //     {
-        //         id: 52,
-        //         title: 'Blog classNameic',
-        //         link: '/blog-classNameic'
-        //     },
-        //     {
-        //         id: 53,
-        //         title: 'Blog Left Sidebar',
-        //         link: '/blog-left-sidebar'
-        //     },
-        //     {
-        //         id: 54,
-        //         title: 'Blog Single',
-        //         link: '/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links'
-        //     },
-        //     {
-        //         id: 55,
-        //         title: 'Not Found',
-        //         link: '/not-found'
-        //     }
-        // ]
-    },
+    // {
+    //     id: 5,
+    //     title: 'Blog',
+    //     link: '/blog',
+    //     submenu: [
+    //         {
+    //             id: 51,
+    //             title: 'Our Blog',
+    //             link: '/blog'
+    //         },
+    //         {
+    //             id: 52,
+    //             title: 'Blog classNameic',
+    //             link: '/blog-classNameic'
+    //         },
+    //         {
+    //             id: 53,
+    //             title: 'Blog Left Sidebar',
+    //             link: '/blog-left-sidebar'
+    //         },
+    //         {
+    //             id: 54,
+    //             title: 'Blog Single',
+    //             link: '/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links'
+    //         },
+    //         {
+    //             id: 55,
+    //             title: 'Not Found',
+    //             link: '/not-found'
+    //         }
+    //     ]
+    // },
         {
         id: 3,
         title: 'Technology',
         link: '/technology',
     },
 
-        {
-        id: 8,
-        title: 'Gallery',
-        link: '/gallery',
-    },
+    //     {
+    //     id: 8,
+    //     title: 'Gallery',
+    //     link: '/gallery',
+    // },
     {
         id: 88,
         title: 'Contact',

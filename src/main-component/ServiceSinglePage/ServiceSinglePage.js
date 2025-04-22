@@ -695,12 +695,16 @@ import { Link } from 'react-router-dom';
 import PageTitle from '../../components/pagetitle/PageTitle';
 import Scrollbar from '../../components/scrollbar/scrollbar';
 import Services from '../../api/Services';
-import shape from '../../images/background/pattern-19.jpg';
+// import shape from '../../images/background/pattern-19.jpg';
 import PartnerSection from '../../components/PartnerSection';
 import Footer from '../../components/footer/Footer';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import htmlReactParser, { domToReact } from 'html-react-parser';
 import BlogSidebar from '../../components/BlogSidebar';
+import ServiceList from './ServiceList';
+import ServiceBaneer from './ServiceBaneer';
+import "./ServiceSinglePage.css";
 
 // Service Detail Page Skeleton Component
 const ServiceDetailSkeleton = () => (
@@ -768,6 +772,12 @@ const ServiceSinglePage = (props) => {
     const [service, setService] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [bannerContent, setBannerContent] = useState("Vyapar Kranti Banner Title SEo ,description ,seo services,packages kjskd");
+    const[address, setAddress] = useState("Vayapar Kranti ,Nazafgarh Near Metro Station test ");
+            const[mobile, setMobile] = useState("+1234567790 test");
+            const[mail, setMail] = useState("test@gmail.com test");
+            const[contact_timing, setcontact_timing] = useState("");
+            const[Map_link, setMap_link] = useState("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.037650106843!2d76.98448781508391!3d28.612870082425267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0fdda4eabfb1%3A0x1b29e6f8e8722395!2sVyapar%20Kranti!5e0!3m2!1sen!2sin!4v1713436924098!5m2!1sen!2sin");
 
     // Hardcoded serviceDetails for fallback
     const serviceDetails = Services.find(item => item.slug === slug);
@@ -865,6 +875,82 @@ const ServiceSinglePage = (props) => {
         fetchServiceById();
     }, [slug, location.state, navigate, serviceDetails]);
 
+     const removeTags = (htmlString) => {
+            if (typeof htmlString !== "string") {
+                console.error("Invalid input for removeTags:", htmlString);
+                return ""; // Return an empty string to prevent errors
+            }
+            
+            // If the string doesn't contain any HTML tags, return it as is
+            if (!htmlString.includes('<') && !htmlString.includes('>')) {
+                return htmlString;
+            }
+            
+            // Use a simplified approach to just extract text content
+            try {
+                return htmlReactParser(htmlString, {
+                    replace: (domNode) => {
+                        if (domNode.type === 'tag') {
+                            // Keep content of all tags, effectively removing the tags themselves
+                            return <>{domToReact(domNode.children)}</>;
+                        }
+                    },
+                });
+            } catch (error) {
+                console.error("Error parsing HTML:", error);
+                
+                // Fallback: use regex to strip tags if parsing fails
+                return htmlString.replace(/<[^>]*>?/gm, '').replace(/&nbsp;/g, ' ').trim();
+            }
+        };
+    
+         // remove tags end
+
+
+    const fetchBannerData = async () => {
+
+    try {
+        setLoading(true);
+        const response = await axios.get(`${API_BASE_URL}/api/contact-element`);
+        console.log('Contact page data response============>:', response.data.elements);
+    
+        const elements = response.data.elements;
+         console.log('Contact page  data response============>:', response.data.elements);
+    
+        if (elements) {
+          if (elements.Address) setAddress(removeTags(elements.Address));
+          if (elements.mobile) setMobile(removeTags(elements.mobile));
+          if (elements.mail) setMail(removeTags(elements.mail));
+          if (elements.Map_link) setMap_link(removeTags(elements.Map_link));
+          if (elements.contact_timing) setcontact_timing(removeTags(elements.contact_timing));
+          
+        
+        }
+        
+        // Process banner content to preserve intended formatting but remove unwanted p tags
+        if (response.data && response.data.elements.banner_content) {
+            const cleanContent = response.data.elements.banner_content
+                .replace(/<p>/g, '') // Remove opening p tags
+                .replace(/<\/p>/g, '') // Remove closing p tags
+                .trim(); // Remove extra whitespace
+            
+            setBannerContent(cleanContent); // Now content still has desired tags like <br> but no p tags
+        }
+        
+        setLoading(false);
+    } catch (err) {
+        console.error("Error fetching banner data:", err);
+        setError("Failed to load banner content. Using default content instead.");
+        setLoading(false);
+    }
+    };
+
+    // Fetch data when component mounts
+    useEffect(() => {
+        fetchBannerData();
+    }, []);
+
+
     if (loading) {
         return (
             <Fragment>
@@ -910,6 +996,8 @@ const ServiceSinglePage = (props) => {
     const displayService = service || serviceDetails;
     console.log("🔥 Final Display Service Data=========>:", displayService);
 
+    
+
     return (
         <Fragment>
             <Navbar hclass={'wpo-header-style-5'} topbarClass={'tb-block'} />
@@ -919,7 +1007,7 @@ const ServiceSinglePage = (props) => {
                     <div className="row clearfix" style={{ display: "flex", flexDirection: "row-reverse" }}>
                         <div className="sidebar-side left-sidebar col-lg-4 col-md-12 col-sm-12">
                             <aside className="sidebar sticky-top">
-                                <div className="sidebar-widget">
+                                {/* <div className="sidebar-widget">
                                      
                                     <ul className="service-list">
                                     {Services.slice(0, 6).map((service, i) => (
@@ -933,23 +1021,24 @@ const ServiceSinglePage = (props) => {
                                      
                                 </ul>
 
-                                </div>
-                                 
-                                <div className="broucher-widget">
+                                </div> */}
+                                 <ServiceList services={Services} onClick={ClickHandler} />
+                                {/* <div className="broucher-widget">
                                     <div className="widget-content" style={{ backgroundImage: `url(${shape})` }}>
                                         <h3>Download <br /> Our Brochures</h3>
                                         <div className="icon flaticon-pdf-1"></div>
                                         <div className="text">Business is a marketing discipline focused on growing visibility in organic (non-paid) technic required.</div>
                                         <Link to="/" className="download">Click here to download</Link>
                                     </div>
-                                </div>
+                                </div> */}
+                                <ServiceBaneer />
                                 <div className="help-widget">
                                     <div className="widget-content">
                                         <h4>Need Help ?</h4>
                                         <div className="text">Please feel free to contact us. We will get back to you with 1-2 business days. Or just call us now</div>
                                         <ul className="help-list">
-                                            <li><Link to="/"><span className="icon fa fa-phone"></span>+0 000 0000 000</Link></li>
-                                            <li><Link to="/"><span className="icon fa fa-envelope-o"></span>Merix@example.com</Link></li>
+                                            <li><Link to="/"><span className="icon fa fa-phone"></span>{mobile}</Link></li>
+                                            <li><Link to="/"><span className="icon fa fa-envelope-o"></span>{mail}</Link></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1001,7 +1090,7 @@ const ServiceSinglePage = (props) => {
                                                 <div className="row">
                                                     {displayService.service_images.map((img, idx) => (
                                                         <div className="column col-lg-6 col-md-6 col-sm-12 mb-4" key={idx}>
-                                                            <div className="image">
+                                                            <div className="image hover-zoom">
                                                                 <img 
                                                                     src={img} 
                                                                     alt={`${displayService.sTitle} - image ${idx + 1}`}

@@ -520,6 +520,8 @@ const TechnologySection = () => {
     checklistItemHoverActive: {
       transform: 'translateX(10px)',
       color: '#0d6efd',
+      // background: linear-gradient(to left, #6917B4 0%, #D54BE1 100%),
+      // background: 'linear-gradient(to left, #6917B4 0%, #D54BE1 100%)',
     }
   };
   
@@ -556,19 +558,22 @@ const TechnologySection = () => {
             <div className="d-flex justify-content-center flex-wrap mb-4 animate__animated animate__fadeIn animate__delay-1s">
               {categories.map(category => (
                 <button
-                  key={category.id}
-                  className={`btn ${activeCategory === category.id ? 'btn-primary' : 'btn-outline-secondary'} m-1`}
-                  onClick={() => setActiveCategory(category.id)}
-                  style={styles.buttonHover}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.transform = 'scale(1.05)';
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                  }}
-                >
-                  {category.name}
-                </button>
+                key={category.id}
+                className={`btn ${activeCategory === category.id ? 'btn-primary' : 'btn-outline-secondary'} m-1`}
+                onClick={() => setActiveCategory(category.id)}
+                style={styles.buttonHover}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                  e.currentTarget.style.background = 'linear-gradient(to left, #6917B4 0%, #D54BE1)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.background = ''; // Reset to original background
+                }}
+              >
+                {category.name}
+              </button>
+
               ))}
             </div>
           </div>

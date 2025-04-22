@@ -5,7 +5,7 @@ import MobileMenu from '../MobileMenu/MobileMenu'
 import { connect } from "react-redux";
 import { removeFromCart } from "../../store/actions/action";
 // import Logo from '../../images/logo.png'
-import companylogo3 from '../../images/companylogo/companylogo3.png'
+import companylogo3 from '../../images/companylogo/logocorrectwhite.jpg'
 import ContactFormModal from '../ContactFormModal/ContactFormModal';
 // import Dashboard from './../Dashboard/Dashboard';
 import htmlReactParser, { domToReact } from 'html-react-parser';
@@ -126,7 +126,7 @@ const Header = (props) => {
                         </Link></div>
                     </div> */}
                     <div className="pull-left logo-box">
-                        <div className="logo"><Link onClick={ClickHandler} to="/home"><img src={companylogo3} alt="" title="" /></Link></div>
+                        <div className="logo"  ><Link onClick={ClickHandler} to="/home"><img src={companylogo3} alt="" title=""  style={{width:'170px', height: "80px"}}/></Link></div>
                     </div>
                     <div className="nav-outer clearfix">
                         <MobileMenu/>
@@ -252,19 +252,19 @@ const Header = (props) => {
                                             </div>
                                         </div>
                                     </li> */}
-                                     <li className="dropdown"><Link onClick={ClickHandler} to="/blog">Blog</Link>
-                                        {/* <ul>
+                                     {/* <li className="dropdown"><Link onClick={ClickHandler} to="/blog">Blog</Link>
+                                        <ul>
                                             <li><Link onClick={ClickHandler} to="/blog">Our Blog</Link></li>
                                             <li><Link onClick={ClickHandler} to="/blog-classNameic">Blog classNameic</Link></li>
                                             <li><Link onClick={ClickHandler} to="/blog-left-sidebar">Blog Left Sidebar</Link></li>
                                             <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Blog Single</Link></li>
                                             <li><Link onClick={ClickHandler} to="/dashboard">Dashboard</Link></li>
                                             <li><Link onClick={ClickHandler} to="/not-found">Not Found</Link></li>
-                                        </ul> */}
-                                    </li>
-                                    <li className="dropdown"><Link onClick={ClickHandler} to="/gallery">Gallery</Link>
+                                        </ul>
+                                    </li> */}
+                                    {/* <li className="dropdown"><Link onClick={ClickHandler} to="/gallery">Gallery</Link>
                                          
-                                    </li>
+                                    </li> */}
                                     
                                      
                                     <li><Link onClick={ClickHandler} to="/technology">Technology</Link></li>

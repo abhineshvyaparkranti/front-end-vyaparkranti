@@ -113,7 +113,7 @@ const SocialSidebar = () => {
     
     const DEFAULT_SOCIAL_LINKS = {
         whatsapp_number: "1234567890",
-        email: "info@exampletest.com",
+        mail: "info@exampletest.com",
         
        mobile: "+1234567890123",
        facebook_link: "https://www.facebook.com/vyaparkranti/",
@@ -384,13 +384,14 @@ const SocialSidebar = () => {
             </a>
 
             {/* Email */}
-            <a href={`mailto:${socialLinks.mail}`}
-                className="sidebar-btn-bodypart   text-white"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => window.open(`mailto:${socialLinks.mail}`, '_blank', 'noopener,noreferrer')} style={{ backgroundColor: '#652e6f' }}>
-                <FaEnvelope className="icon-bodypart" />
-                <span className="label-bodypart">{socialLinks.mail}</span>
+             <a href={`mailto:${socialLinks.mail}`}
+            className="sidebar-btn-bodypart text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => handleLinkClick(`mailto:${socialLinks.mail}`, '_blank', 'noopener,noreferrer')}
+            style={{ backgroundColor: '#652e6f' }}>
+            <FaEnvelope className="icon-bodypart" />
+            <span className="label-bodypart">{socialLinks.mail}</span>
             </a>
 
             {/* Phone */}

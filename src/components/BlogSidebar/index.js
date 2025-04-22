@@ -166,6 +166,7 @@ import axios from 'axios';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { API_BASE_URL } from '../../api/config/apiConfig';
+import AuthorWidget from './AuthorWidget';
 
 const BlogSidebar = (props) => {
     const [blogs, setBlogs] = useState([]);
@@ -334,7 +335,7 @@ const BlogSidebar = (props) => {
                 </div>
 
                 {/* Author Info */}
-                <div className="sidebar-widget author-widget">
+                {/* <div className="sidebar-widget author-widget">
                     <div className="widget-content" style={{ backgroundImage: `url(${shape})` }}>
                         <div className="image"><img src={about} alt="Author" /></div>
                         <div className="name">Pablo Villalpando</div>
@@ -348,7 +349,8 @@ const BlogSidebar = (props) => {
                             <li><Link onClick={ClickHandler} to="/blog-single/sample-4" className="fa fa-google"></Link></li>
                         </ul>
                     </div>
-                </div>
+                </div> */}
+                <AuthorWidget />
             </aside>
         </div>
     );

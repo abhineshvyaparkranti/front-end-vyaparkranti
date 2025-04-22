@@ -822,7 +822,7 @@ const Gallery = () => {
       </div>
 
       {/* Pagination */}
-      {!loading && visibleItems.length > 0 && (
+      {/* {!loading && visibleItems.length > 0 && (
         <nav aria-label="Page navigation" className="my-5">
           <ul className="pagination justify-content-center">
             <li className="page-item">
@@ -842,7 +842,7 @@ const Gallery = () => {
             </li>
           </ul>
         </nav>
-      )}
+      )} */}
 
       {/* CTA Section */}
        <BubbleSection />

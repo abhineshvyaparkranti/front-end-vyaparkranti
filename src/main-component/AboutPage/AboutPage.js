@@ -22,12 +22,14 @@ const AboutPage = (props) => {
             <About showLearnMore={false} />
             {/* <Mission sClass={'style-two margin-top'}/> */}
             
-            <WhyChoose3 />
+            
+             <BuildStep />
             {/* <TeamSection /> */}
             <TeamSectionTwo />
             <TeamSectionS2 />
+             <WhyChoose3 />
             {/* <FunFact3 /> */}
-            <BuildStep />
+            
             {/* <WhyChoose2 /> */}
             {/* <Subscribe /> */}
             <Footer/>

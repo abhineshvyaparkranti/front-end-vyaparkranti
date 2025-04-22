@@ -204,12 +204,13 @@ import Projects from '../../api/project';
 import shape1 from '../../images/background/pattern-3.png';
 import shape2 from '../../images/background/pattern-4.png';
 import shape3 from '../../images/background/pattern-5.png';
-import companylogo3 from '../../images/companylogo/companylogo3.png';
+import companylogo3 from '../../images/companylogo/logonewwhite.jpg';
 import PrivacyPage from './../../main-component/PrivacyPage/PrivacyPage';
 import htmlReactParser, { domToReact } from 'html-react-parser';
 import { API_BASE_URL } from '../../api/config/apiConfig';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import ServiceList from './../../main-component/ServiceSinglePage/ServiceList';
 
 const Footer = (props) => {
     const ClickHandler = () => {
@@ -313,14 +314,14 @@ const Footer = (props) => {
                                 </div> */}
 
                                     <div className="logo">
-                                            <Link onClick={ClickHandler} to="/"><img src={companylogo3} alt="" /></Link>
+                                            <Link onClick={ClickHandler} to="/"><img src={companylogo3} alt="" style={{width: '170px', height: "80px"}} /></Link>
                                      </div>
 
                                         <div className="text">
                                             {loading ? (
                                                 <Skeleton count={3} />
                                             ) : (
-                                                "Our approach to SEO is uniquely built around what we know works…and what we know doesn't work. With over 200 verified factors in play."
+                                                "At VyaparKranti, our SEO approach is grounded in proven strategies and backed by data. With over 200 verified ranking factors at play, we help businesses enhance their online visibility through smart, results-driven optimization."
                                             )}
                                         </div>
                                     </div>
@@ -328,7 +329,11 @@ const Footer = (props) => {
                                 <div className="footer-column col-lg-5 col-md-6 col-sm-12">
                                     <div className="footer-widget links-widget">
                                         <h4>{loading ? <Skeleton width={100} /> : "Services"}</h4>
-                                        <ul className="list-link">
+                                        <ul className="list-link"> 
+                                        <ServiceList />
+                                         
+                                        </ul>
+                                        {/* <ul className="list-link">
                                             {loading ? (
                                                 Array(6).fill().map((_, i) => (
                                                     <li key={i}><Skeleton width={120} /></li>
@@ -341,7 +346,7 @@ const Footer = (props) => {
                                                     <li><Link onClick={ClickHandler} to="/careers">Careers</Link></li>
                                                 </>
                                             )}
-                                        </ul>
+                                        </ul> */}
                                     </div>
                                 </div>
                             </div>
@@ -358,12 +363,14 @@ const Footer = (props) => {
                                                 ))
                                             ) : (
                                                 <>
-                                                    <li><Link onClick={ClickHandler} to="/">Home</Link></li>
+                                                    {/* <li><Link onClick={ClickHandler} to="/">Home</Link></li> */}
                                                     <li><Link onClick={ClickHandler} to="/terms">Terms & Condition</Link></li>
                                                     <li><Link onClick={ClickHandler} to="/privacy">Privacy & Policy</Link></li>
                                                     <li><Link onClick={ClickHandler} to="/blog">Blog</Link></li>
                                                     <li><Link onClick={ClickHandler} to="/contact">Help</Link></li>
                                                     <li><Link onClick={ClickHandler} to="/gallery">Gallery</Link></li>
+                                                    <li><Link onClick={ClickHandler} to="/careers">Careers</Link></li>
+                                                    <li><Link onClick={ClickHandler} to="/faq">FAQ</Link></li>
                                                 </>
                                             )}
                                         </ul>

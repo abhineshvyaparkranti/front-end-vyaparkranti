@@ -23,6 +23,8 @@ const WhyChoose3 = (props) => {
     const [loading, setLoading] = useState(true);
     const[address, setAddress] = useState("Vayapar Kranti ,Nazafgarh Near Metro Station test ");
     const [error, setError] = useState(null);
+    const [description, setDescription] = useState("");
+    const [title, setTitle] = useState("");
  
     const removeTags = (htmlString) => {
         if (typeof htmlString !== "string") {
@@ -61,14 +63,17 @@ const fetchBannerData = async () => {
 
     try {
         setLoading(true);
-        const response = await axios.get(`${API_BASE_URL}/api/home-elements`);
+        // const response = await axios.get(`${API_BASE_URL}/api/get-choose-data`);
+        const response = await axios.get("http://192.168.1.8:8000/api/get-choose-data")
         // console.log('About us page data response============>:', response.data.elements);
     
-        const elements = response.data.elements;
-         console.log('About us page why choose us data response============>:', response.data.elements);
+        const elements = response.data.chhoseUs;
+         console.log('About us page why choose us 2nd data response============>:', response.data.chhoseUs);
     
         if (elements) {
           if (elements.Address) setAddress(removeTags(elements.Address));
+          if (elements.description) setDescription(removeTags(elements.description));
+          if (elements.title) setTitle(removeTags(elements.title));
            
           
         
@@ -156,14 +161,14 @@ const fetchBannerData = async () => {
                         <div className="inner-column">
                             <div className="sec-title">
                                 <div className="title">WHY US CHOOSE NOW</div>
-                                <h2>At Vyapar Kranti, we provide top-notch facilities to empower your business.</h2>
+                                <h2>{title}</h2>
                             </div>
-                            <div className="bold-text">At Vyapar Kranti, we are more than just a service provider — we are your strategic growth partner in the digital age. Here's why now is the perfect time to partner with us:</div>
-                            <ul className="list-style-three">
-                                <li>We've been supporting WordPress since the beginning.</li>
+                            <div className="bold-text">{description}</div>
+                            {/* <ul className="list-style-three">
+                                <li>We've been supporting WordPress since the beginning. test</li>
                                 <li>Perfect for large sites or agencies managing multiple clients.</li>
                                 <li>Our easy-to-use control panel and API let you spend</li>
-                            </ul>
+                            </ul> */}
                             <Link onClick={ClickHandler} to="/contact" className="theme-btn btn-style-five"><span className="txt">Learn More</span></Link>
                         </div>
                     </div>

@@ -221,6 +221,7 @@ import blog2 from '../../images/resource/author-1.png';
 import blog3 from '../../images/resource/author-2.png';
 import gl1 from '../../images/resource/news-12.jpg';
 import gl2 from '../../images/resource/news-13.jpg';
+import styles from './Blog.module.css';
 
 const BlogSingle = () => {
     const { id } = useParams();
@@ -344,7 +345,8 @@ const BlogSingle = () => {
                                             <img
                                                 src={img}
                                                 alt={`Blog Image ${index + 1}`}
-                                                className="img-fluid"
+                                                className={`img-fluid ${styles.img}`}
+                                                // className="img-fluid"
                                                 style={{ objectFit: 'cover' }}
                                             />
                                             </div>
@@ -355,7 +357,7 @@ const BlogSingle = () => {
                                     </div>
 
                                     <div className="post-share-options">
-                                        <div className="post-share-inner clearfix">
+                                        {/* <div className="post-share-inner clearfix">
                                             <div className="pull-left">
                                                 <div className="post-title">Tags:</div>
                                                 <ul className="tags">
@@ -380,7 +382,7 @@ const BlogSingle = () => {
                                                 <li className="linkedin"><Link onClick={ClickHandler} to="#"><span className="fa fa-google-plus"></span></Link></li>
                                                 <li className="pinterest"><Link onClick={ClickHandler} to="#"><span className="fa fa-pinterest-p"></span></Link></li>
                                             </ul>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>

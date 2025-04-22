@@ -173,17 +173,17 @@ const Hero = () => {
     // Fallback data in case API doesn't return anything
     const fallbackHeroContents = [
         {
-            mainTitle: "Information Technology Enablement Services test",
+            mainTitle: "Information Technology Enablement Services.",
             subTitle: "Turning clicks into customers with coding",
             buttonText: "Let's Start"
         },
         {
-            mainTitle: "Revenue Management System. test",
+            mainTitle: "Revenue Management System.",
             subTitle: "Stay booked. Stay profitable",
             buttonText: "Let's Start"
         },
         {
-            mainTitle: "Brand & Marketing Solution. test",
+            mainTitle: "Brand & Marketing Solution.",
             subTitle: "Start with clarity. Grow with confidence",
             buttonText: "Let's Start"
         }

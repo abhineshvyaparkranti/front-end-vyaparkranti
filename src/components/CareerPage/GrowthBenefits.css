@@ -3,6 +3,7 @@
 /* Main Container Styles */
  /* Main container styles */
 .gb-container {
+  font-family: Archivo, sans-serif;
   background-color: #f9f9f9;
   min-height: 100vh;
 }

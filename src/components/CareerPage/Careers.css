@@ -1,4 +1,9 @@
 /* Careers.css */
+
+.careers-page {
+    font-family: Archivo, sans-serif;
+}
+
 .careers-page .section-padding {
     padding: 80px 0;
 }

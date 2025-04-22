@@ -13,6 +13,7 @@ import pimg2 from '../../images/clients/2.png'
 import pimg3 from '../../images/clients/3.png'
 import pimg4 from '../../images/clients/4.png'
 import pimg5 from '../../images/clients/5.png'
+import SectionTitle from '../SectionTitle/SectionTitle';
 
 // Fallback partners in case API fails
 const fallbackPartners = [
@@ -145,7 +146,10 @@ const PartnerSection = (props) => {
     }, []);
 
     return (
+         
+          
         <section className={`clients-section ${props.styleClass}`}>
+             <SectionTitle subTitle={'Our Partner'} />
             <div className="auto-container">
                 <div className="inner-container">
                     <div className="sponsors-outer">
@@ -207,6 +211,7 @@ const PartnerSection = (props) => {
                 </div>
             </div>
         </section>
+         
     );
 }
 

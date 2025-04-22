@@ -252,7 +252,7 @@ img {
 .back-to-top::after {
 	bottom: 0;
 	z-index: 5;
-	border-bottom: 20px solid #ff0700;
+	border-bottom: 20px solid #ff6600;
 }
 
 .back-to-top:hover,
@@ -10692,6 +10692,8 @@ img {
 .service-detail .inner-box .image img {
 	position: relative;
 	width: 100%;
+	min-height: 250px;
+	/* max-height: 250px; */
 	display: block;
 }
 

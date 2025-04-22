@@ -248,6 +248,8 @@ useEffect(() => {
                                 </div>
                             </div>
 
+                            
+
                             {/* Phone and Email - example from API data */}
                             <div className="column col-lg-6 col-md-6 col-sm-12">
                                 <div className="info-box">
@@ -301,6 +303,23 @@ useEffect(() => {
                                 </div>
                             </div>
 
+                             <div className="column col-lg-6 col-md-6 col-sm-12">
+                                <div className="info-box">
+                                    <div className="box-inner">
+                                        <div className="icon flaticon-pin"></div>
+                                        13005 Greenville Avenue <br /> California, TX 70240
+
+                                        {/* {loading ? (
+                                                <Skeleton width={150} height={50} />
+                                                ) : (
+                                                address
+                                                )} */}
+
+
+                                    </div>
+                                </div>
+                            </div>
+
                             {/* Socials from team_info[0] as an example */}
                             {/* {aboutData && aboutData.team_info?.length > 0 && (
                                 <div className="column col-lg-6 col-md-6 col-sm-12">
@@ -313,7 +332,7 @@ useEffect(() => {
                                     </ul>
                                 </div>
                             )} */}
-                            <div className="column col-lg-6 col-md-6 col-sm-12">
+                            {/* <div className="column col-lg-6 col-md-6 col-sm-12">
                                 <ul className="social-box">
                                     <span>Our Socials Links <i>Print this page to PDF for the complete set of vectors.</i></span>
                                     <li className="facebook"><Link className="fa fa-facebook-f" to="/contact"></Link></li>
@@ -321,7 +340,7 @@ useEffect(() => {
                                     <li className="linkedin"><Link to="/contact" className="fa fa-google-plus"></Link></li>
                                     <li className="pinterest"><Link to="/contact" className="fa fa-pinterest-p"></Link></li>
                                 </ul>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
