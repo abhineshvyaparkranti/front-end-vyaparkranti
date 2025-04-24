@@ -5,9 +5,10 @@
   "private": true,
   "proxy": "https://reactest.vyaparkranti.in",
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.11.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
     "@mui/styled-engine-sc": "^5.11.0",
     "ajv": "^6.12.6",
     "ajv-keywords": "^3.5.2",

@@ -1,5 +1,7 @@
 import React from 'react';
 import Qimg from '../../images/resource/faq.png'
+import ContactFormModal from '../../components/ContactFormModal/ContactFormModal';
+import ContactForm from '../../components/ContactFrom';
 
 const Question = () => {
 
@@ -19,7 +21,7 @@ const Question = () => {
                                 <div className="text">We provide best service for our customer check the list now.</div>
                             </div>
                             <div className="faq-form">
-                                <form method="post" onSubmit={SubmitHandler}>
+                                {/* <form method="post" onSubmit={SubmitHandler}>
                                     <div className="form-group">
                                         <input type="text" name="username" value="" placeholder="Name" required />
                                     </div>
@@ -36,7 +38,8 @@ const Question = () => {
                                         <button type="submit" className="theme-btn btn-style-three"><span className="txt">Send Question</span></button>
                                     </div>
 
-                                </form>
+                                </form> */}
+                                <ContactForm />
                             </div>
 
                         </div>

@@ -225,8 +225,10 @@ const Footer = (props) => {
     const [mail, setMail] = useState("test@gmail.com");
     const [Map_link, setMap_link] = useState("https://www.google.com/maps?ll=28.61287,76.986676&z=16&t=m&hl=en&gl=IN&mapclient=embed&cid=1957349469795263381");
     const [error, setError] = useState(null);
-     const[contact_timing, setcontact_timing] = useState("");
-    const [Logo, setLogo] = useState(null);
+     const[contact_timing, setcontact_timing] = useState("10am - 6pm");
+    const [Logo, setLogo] = useState("../../images/companylogo/logonewwhite.jpg");
+    const [footer_content, setfooter_content] = useState("Our approach to SEO is uniquely built around what we know works…");
+    const [international_address, setinternational_address] = useState(" 1st avneu USA");
 
     const removeTags = (htmlString) => {
         if (typeof htmlString !== "string") {
@@ -267,7 +269,9 @@ const Footer = (props) => {
                 if (elements.mail) setMail(removeTags(elements.mail));
                 if (elements.Map_link) setMap_link(removeTags(elements.Map_link));
                 if (elements.Logo) setLogo(removeTags(elements.Logo));
+                 if (elements.footer_content) setfooter_content(removeTags(elements.footer_content));
                 if (elements.contact_timing) setcontact_timing(removeTags(elements.contact_timing));
+                if (elements.international_address) setinternational_address(removeTags(elements.international_address));
             }
 
             if (response.data && response.data.elements.banner_content) {
@@ -321,7 +325,7 @@ const Footer = (props) => {
                                             {loading ? (
                                                 <Skeleton count={3} />
                                             ) : (
-                                                "At VyaparKranti, our SEO approach is grounded in proven strategies and backed by data. With over 200 verified ranking factors at play, we help businesses enhance their online visibility through smart, results-driven optimization."
+                                                footer_content
                                             )}
                                         </div>
                                     </div>
@@ -392,7 +396,7 @@ const Footer = (props) => {
                                                     <li><span className="icon flaticon-phone-call"></span><Link onClick={ClickHandler} to="/">{mobile}</Link></li>
                                                     <li><span className="icon flaticon-email"></span><Link onClick={ClickHandler} to="/">{mail}</Link></li>
                                                     <li><span className="icon flaticon-maps-and-flags"></span> {address}</li>
-                                                     <li><span className="icon flaticon-maps-and-flags"></span>13005 Greenville Avenue California, TX 0240</li>
+                                                     <li><span className="icon flaticon-maps-and-flags"></span>{international_address}</li>
                                                 </>
                                             )}
                                         </ul>

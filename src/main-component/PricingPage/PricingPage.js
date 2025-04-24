@@ -5,6 +5,7 @@ import Pricing from '../../components/Pricing/Pricing';
 import Scrollbar from '../../components/scrollbar/scrollbar'
 import Footer from '../../components/footer/Footer';
 import Subscribe from '../../components/Subscribe/Subscribe';
+import PackageComparison from './PackageComparison';
 
 const PricingPage = (props) => {
 
@@ -13,6 +14,7 @@ const PricingPage = (props) => {
             <Navbar />
             <PageTitle pageTitle={'Pricing Plan'} pagesub={'Pricing'} />
             <Pricing sClass={'style-two'}/>
+            <PackageComparison />
             <Subscribe />
             <Footer/>
             <Scrollbar />

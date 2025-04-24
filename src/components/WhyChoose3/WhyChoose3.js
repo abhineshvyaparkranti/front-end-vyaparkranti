@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import cImg from '../../images/icons/icon-8.png'
 import cImg2 from '../../images/icons/icon-9.png'
 import cImg3 from '../../images/icons/icon-10.png'
+import WhyChooseUsCard from './WhyChooseUsCard';
 
 
 const WhyChoose3 = (props) => {
@@ -25,6 +26,7 @@ const WhyChoose3 = (props) => {
     const [error, setError] = useState(null);
     const [description, setDescription] = useState("");
     const [title, setTitle] = useState("");
+      
  
     const removeTags = (htmlString) => {
         if (typeof htmlString !== "string") {
@@ -102,6 +104,8 @@ const fetchBannerData = async () => {
             fetchBannerData();
         }, []);
 
+
+    
          // api end
     
     return (
@@ -113,48 +117,7 @@ const fetchBannerData = async () => {
             <div className="auto-container">
                 <div className="row clearfix">
                     <div className="blocks-column col-lg-6 col-md-12 col-sm-12">
-                        <div className="inner-column">
-                            <div className="row clearfix">
-                                <div className="service-block-three col-lg-6 col-md-6 col-sm-12">
-                                    <div className="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                        <div className="icon-box">
-                                            <span className="icon flaticon-badge"></span>
-                                        </div>
-                                        <h5><Link onClick={ClickHandler} to="/service">IT-Enabled Smart Solutions</Link></h5>
-                                        <div className="text">Bridging sellers and buyers using advanced ITES and strategic brand enablement.</div>
-                                    </div>
-                                </div>
-                                <div className="service-block-three col-lg-6 col-md-6 col-sm-12">
-                                    <div className="inner-box wow fadeInUp" data-wow-delay="150ms" data-wow-duration="1500ms">
-                                        <div className="icon-box">
-                                            <span className="icon flaticon-chat-3"></span>
-                                        </div>
-                                        <h5><Link onClick={ClickHandler} to="/service">Strategy to Execution</Link></h5>
-                                        <div className="text">From insight to implementation, we align every step with your business goals.</div>
-                                    </div>
-                                </div>
-                                <div className="service-block-three col-lg-6 col-md-6 col-sm-12">
-                                    <div className="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                                        <div className="icon-box">
-                                            <span className="icon flaticon-growth"></span>
-                                        </div>
-                                        <h5><Link onClick={ClickHandler} to="/service">Trusted by Clients</Link></h5>
-                                        <div className="text">Proven results with glowing testimonials from respected business leaders and founders.</div>
-                                    </div>
-                                </div>
-
-                                <div className="service-block-three col-lg-6 col-md-6 col-sm-12">
-                                    <div className="inner-box wow fadeInUp" data-wow-delay="150ms" data-wow-duration="1500ms">
-                                        <div className="icon-box">
-                                            <span className="icon flaticon-management"></span>
-                                        </div>
-                                        <h5><Link onClick={ClickHandler} to="/service">Tailored for Growth</Link></h5>
-                                        <div className="text">Customized strategies designed to drive sustainable, scalable growth for every business.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                        <WhyChooseUsCard />
                     </div>
 
                     <div className="content-column col-lg-6 col-md-12 col-sm-12">
