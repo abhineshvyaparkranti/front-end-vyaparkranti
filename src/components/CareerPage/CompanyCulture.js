@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CompanyCulture.css';
+import SectionTitle from '../SectionTitle/SectionTitle';
 
 const CompanyCulture = () => {
   const [activeValue, setActiveValue] = useState(null);
@@ -19,53 +20,50 @@ const CompanyCulture = () => {
   }, []);
 
   // Mock data for company values
-  const companyValues = [
-    {
-      id: 1,
-      title: "Innovation",
-      description: "We challenge conventional thinking and embrace new ideas to drive meaningful change.",
-      icon: "💡",
-      color: "#6366f1"
-    },
-    {
-      id: 2,
-      title: "Collaboration",
-      description: "We believe great things happen when we work together across teams and perspectives.",
-      icon: "🤝",
-      color: "#8b5cf6"
-    },
-     
-    {
-      id: 3,
-      title: "Ownership",
-      description: "We take responsibility for our work and empower each other to make decisions.",
-      icon: "🚀",
-      color: "#f97316"
-    },
-    {
-      id: 4,
-      title: "Balance",
-      description: "We value well-being and support work-life harmony for sustainable excellence.",
-      icon: "⚖️",
-      color: "#14b8a6"
-    },
-
-    {
-        id: 5,
-        title: "Balance",
-        description: "We value well-being and support work-life harmony for sustainable excellence.",
-        icon: "⚖️",
-        color: "#14b8a6"
-      },
-
-      {
-        id: 6,
-        title: "Balance",
-        description: "We value well-being and support work-life harmony for sustainable excellence.",
-        icon: "⚖️",
-        color: "#14b8a6"
-      }
-  ];
+   const companyValues = [
+  {
+    id: 1,
+    title: "Innovation",
+    description: "We challenge conventional thinking and embrace new ideas to drive meaningful change.",
+    icon: "💡",
+    color: "#6366f1"
+  },
+  {
+    id: 2,
+    title: "Collaboration",
+    description: "We believe great things happen when we work together across teams and perspectives.",
+    icon: "🤝",
+    color: "#8b5cf6"
+  },
+  {
+    id: 3,
+    title: "Ownership",
+    description: "We take responsibility for our work and empower each other to make decisions.",
+    icon: "🚀",
+    color: "#f97316"
+  },
+  {
+    id: 4,
+    title: "Balance",
+    description: "We prioritize well-being and support sustainable work-life harmony for long-term success.",
+    icon: "⚖️",
+    color: "#14b8a6"
+  },
+  {
+    id: 5,
+    title: "Integrity",
+    description: "We act with honesty, transparency, and ethical responsibility in everything we do.",
+    icon: "🛡️",
+    color: "#0ea5e9"
+  },
+  {
+    id: 6,
+    title: "Customer Focus",
+    description: "We listen attentively to our customers and deliver value that exceeds their expectations.",
+    icon: "👂",
+    color: "#ec4899"
+  }
+];
 
   // Mock data for testimonials
   const testimonials = [
@@ -132,7 +130,8 @@ const CompanyCulture = () => {
       <div className="container py-5">
         {/* Header */}
         <div className="cc-header text-center mb-5">
-          <h1 className="cc-main-title">Our Culture</h1>
+          {/* <h1 className="cc-main-title">Our Culture</h1> */}
+           <SectionTitle subTitle={'Our Culture'} />
           <p className="cc-subtitle">
             We're building more than a company — we're creating a community where talented people thrive.
           </p>
@@ -147,7 +146,7 @@ const CompanyCulture = () => {
             >
               Our Values
             </button>
-            <button 
+            {/* <button 
               className={`cc-nav-item ${visibleSection === 'stories' ? 'active' : ''}`}
               onClick={() => setVisibleSection('stories')}
             >
@@ -158,7 +157,7 @@ const CompanyCulture = () => {
               onClick={() => setVisibleSection('events')}
             >
               Culture Events
-            </button>
+            </button> */}
           </div>
         </div>
 

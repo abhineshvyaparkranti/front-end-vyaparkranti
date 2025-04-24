@@ -222,12 +222,18 @@ import blog3 from '../../images/resource/author-2.png';
 import gl1 from '../../images/resource/news-12.jpg';
 import gl2 from '../../images/resource/news-13.jpg';
 import styles from './Blog.module.css';
+import CommentReviewForm from './CommentReviewForm';
 
 const BlogSingle = () => {
     const { id } = useParams();
+    const [blogData, setBlogData] = useState(null);
     const [blog, setBlog] = useState(null);
+     const [comment, setComment] = useState(null);
+     const [data, setData] = useState();
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    
+    const [visibleComments, setVisibleComments] = useState(3);
 
     const ClickHandler = () => window.scrollTo(10, 0);
     const submitHandler = (e) => e.preventDefault();
@@ -238,8 +244,14 @@ const BlogSingle = () => {
                 setLoading(true);
                 const response = await axios.get(`${API_BASE_URL}/api/blog-details/${id}`);
                 if (response.data.blog) {
-                    console.log("Blog data:", response.data.blog);
+                    console.log("Blog data details page============>:", response.data.blog);
                     setBlog(response.data.blog);
+                     setComment(response.data.blog.review);
+                     setData(response.data.blog.review);
+                     setBlogData(response.data.blog.review);
+
+                    console.log("Blog data comment page============>:", response.data.blog.review);
+
                 } else {
                     setError("Blog not found");
                 }
@@ -388,24 +400,85 @@ const BlogSingle = () => {
                             </div>
 
                             {/* Author Section */}
-                            <div className="authors-box">
+                            {/* <div className="authors-box">
                                 <div className="author-inner">
                                     <div className="thumb"><img src={blog1} alt="" /></div>
-                                    <div className="author">Author</div>
+                                    <div className="author"></div>
                                     <h4 className="name">Manika Rock</h4>
                                     <div className="text">He is attended the State University of New York at Oswego where he majored in English Literature and Creative Writing.</div>
-                                    <ul className="social-icon clearfix">
-                                        <li><Link onClick={ClickHandler} to="#"><i className="fa fa-facebook-f"></i></Link></li>
-                                        <li><Link onClick={ClickHandler} to="#"><i className="fa fa-google-plus"></i></Link></li>
-                                        <li><Link onClick={ClickHandler} to="#"><i className="fa fa-twitter"></i></Link></li>
-                                        <li><Link onClick={ClickHandler} to="#"><i className="fa fa-linkedin"></i></Link></li>
-                                    </ul>
+                                     
+                                </div>
+                            </div> */}
+
+                              {/* <div className="authors-box">
+                            <div className="author-inner">
+                                <div className="thumb"><img src={blog1} alt="" /></div>
+                                <div className="author">Author</div>
+                                {(() => {
+                                const activeReviewer = comment?.find(item => item.status === 1);
+                                
+                                if (activeReviewer) {
+                                    return (
+                                    <>
+                                        <h4 className="name">
+                                        {activeReviewer.first_name}
+                                        </h4>
+                                        <div className="text">
+                                        Author of this blog titled <strong>{blogData?.title}</strong>.
+                                        </div>
+                                    </>
+                                    );
+                                } else {
+                                    return <div className="text">No active reviewer available.</div>;
+                                }
+                                })()}
+                            </div>
+                            </div> */}
+
+                            {/* Comment Section with Load More */}
+                            <div className="comments-section mt-4">
+                        <h3 className="mb-4">Comments</h3>
+
+                        {/* Comment listing */}
+                        {comment.slice(0, visibleComments).map((item) => (
+                            <div key={item.id} className="card mb-3">
+                            <div className="card-body d-flex">
+                                {/* Profile Icon */}
+                                <div className="me-3">
+                                <div className="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center" style={{ width: '50px', height: '50px', fontSize: '20px' }}>
+                                    <i className="fa fa-user"></i>
+                                </div>
+                                </div>
+
+                                {/* Comment Content */}
+                                <div>
+                                <h5 className="card-title mb-1">
+                                    {item.first_name} {item.last_name}
+                                </h5>
+                                <div className="text-muted mb-1">Rating: {item.review}/5</div>
+                                <p className="card-text">{item.comments}</p>
                                 </div>
                             </div>
+                            </div>
+                        ))}
+
+                        {/* Load More Button */}
+                        {comment.length > visibleComments && (
+                            <div className="text-center">
+                            <button
+                                className="btn btn-outline-primary mt-3"
+                                onClick={() => setVisibleComments((prevCount) => prevCount + 3)}
+                            >
+                                Load More
+                            </button>
+                            </div>
+                        )}
+                        </div>
+
 
                             {/* Comment Section */}
 
-                           <div className="comment-form">
+                           {/* <div className="comment-form">
                             <div className="group-title"><h4>Add Your Reviews</h4></div>
                              <div className="rating-box">
                                   <div className="text"> Your Rating:</div>
@@ -462,10 +535,13 @@ const BlogSingle = () => {
                                       </div>
                                   </form>
 
-                              </div>
+                              </div> */}
 
                  
                              
+                         <CommentReviewForm blogId={id} />
+                         {/* <CommentReviewForm blogId={singleBlog.id} /> */}
+
 
                              
                             

@@ -392,6 +392,7 @@ const Footer = (props) => {
                                                     <li><span className="icon flaticon-phone-call"></span><Link onClick={ClickHandler} to="/">{mobile}</Link></li>
                                                     <li><span className="icon flaticon-email"></span><Link onClick={ClickHandler} to="/">{mail}</Link></li>
                                                     <li><span className="icon flaticon-maps-and-flags"></span> {address}</li>
+                                                     <li><span className="icon flaticon-maps-and-flags"></span>13005 Greenville Avenue California, TX 0240</li>
                                                 </>
                                             )}
                                         </ul>

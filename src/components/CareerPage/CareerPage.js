@@ -351,6 +351,7 @@ import { API_BASE_URL } from '../../api/config/apiConfig';
 import { Link } from 'react-router-dom';
  
 import './Careers.css';
+import Applyform from './Applyform';
 
 const SkeletonLoader = () => {
   return (
@@ -640,127 +641,7 @@ const CareerPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-4">
-                <div className="application-form-wrapper">
-                  <h3>Apply for this position</h3>
-                  
-                  {submitted ? (
-                    <div className="alert alert-success">
-                      Your application has been submitted successfully. We'll be in touch soon!
-                    </div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="application-form">
-                      <div className="mb-3">
-                        <label htmlFor="fullName" className="form-label">Full Name *</label>
-                        <input 
-                          type="text" 
-                          className="form-control" 
-                          id="fullName" 
-                          name="fullName"
-                          value={formData.fullName}
-                          onChange={handleInputChange}
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-3">
-                        <label htmlFor="email" className="form-label">Email Address *</label>
-                        <input 
-                          type="email" 
-                          className="form-control" 
-                          id="email" 
-                          name="email"
-                          value={formData.email}
-                          onChange={handleInputChange}
-                          required
-                        />
-                      </div>
-                      
-                      <div className="mb-3">
-                        <label htmlFor="phone" className="form-label">Phone Number</label>
-                        <input 
-                          type="tel" 
-                          className="form-control" 
-                          id="phone" 
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleInputChange}
-                        />
-                      </div>
-
-                      <div className="mb-3">
-                        <label htmlFor="department" className="form-label">Department *</label>
-                        <select
-                          className="form-control"
-                          id="department"
-                          name="department"
-                          value={formData.department}
-                          onChange={handleInputChange}
-                          required
-                        >
-                          <option value="">Select Department</option>
-                          <option value="Engineering">Engineering</option>
-                          <option value="Marketing">Marketing</option>
-                          <option value="Sales">Sales</option>
-                          <option value="HR">Human Resources</option>
-                          <option value="Design">Design</option>
-                          {/* Add sub-departments like Engineering -> Frontend, Backend via optgroups if needed */}
-                        </select>
-                      </div>
-
-                      <div className="mb-3">
-                        <label htmlFor="position" className="form-label">Position Applying For *</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="position"
-                          name="position"
-                          value={formData.position}
-                          onChange={handleInputChange}
-                          placeholder="e.g. Frontend Developer"
-                          required
-                        />
-                      </div>
-
-                      
-                      <div className="mb-3">
-                        <label htmlFor="resume" className="form-label">Resume/CV *</label>
-                        <input 
-                          type="file" 
-                          className="form-control" 
-                          id="resume" 
-                          name="resume"
-                          onChange={handleFileChange}
-                          accept=".pdf,.doc,.docx"
-                          required
-                        />
-                        <div className="form-text">Accepted formats: PDF, DOC, DOCX</div>
-                      </div>
-
-                      
-                      <div className="mb-3">
-                        <label htmlFor="coverLetter" className="form-label">Cover Letter</label>
-                        <textarea 
-                          className="form-control" 
-                          id="coverLetter" 
-                          name="coverLetter"
-                          rows="4"
-                          value={formData.coverLetter}
-                          onChange={handleInputChange}
-                        ></textarea>
-                      </div>
-                      
-                      <button 
-                        type="submit" 
-                        className="btn theme-btn w-100"
-                        disabled={submitting}
-                      >
-                        {submitting ? 'Submitting...' : 'Submit Application'}
-                      </button>
-                    </form>
-                  )}
-                </div>
-              </div>
+               <Applyform />
             </div>
           </div>
         </div>

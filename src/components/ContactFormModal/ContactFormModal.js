@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+ import React, { useState, useEffect } from 'react';
 import { Modal, Button, Form, Alert } from 'react-bootstrap';
+import axios from 'axios';
+import { API_BASE_URL } from '../../api/config/apiConfig'; 
 import './ContactFormModal.css';
 
 const ContactFormModal = ({ show, handleClose }) => {
@@ -9,43 +11,60 @@ const ContactFormModal = ({ show, handleClose }) => {
     location: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
   });
+
+  // Reset form when the modal is shown
+  useEffect(() => {
+    if (show) {
+      setFormData({
+        name: '',
+        location: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
+      setSubmitted(false); // Reset submitted state when modal is shown
+    }
+  }, [show]);
 
   const closeModal = () => {
     handleClose();
-    // Reset form after hiding modal
-    if (submitted) {
-      setTimeout(() => {
-        setSubmitted(false);
-        setFormData({
-          name: '',
-          location: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
-      }, 300);
-    }
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted with data:", formData);
-    
-    // Show thank you message
-    setSubmitted(true);
-    
-    // Close modal after showing thank you message
-    setTimeout(closeModal, 3000);
+    try {
+      const payload = {
+        name: formData.name,
+        location: formData.location,
+        phone: formData.phone,
+        message: formData.message,
+      };
+
+      // Send form data to the backend API via POST request
+      // const response = await axios.post('http://192.168.1.12:8000/api/save-quotes', payload);
+       const response = await axios.post(`${API_BASE_URL}/api/save-quotes`, payload);
+
+      console.log("Request a quote submitted form ==============>:", response.data);
+
+      // Show thank you message
+      setSubmitted(true);
+
+      // Close modal after showing thank you message
+      setTimeout(closeModal, 3000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Something went wrong while submitting. Please try again.");
+    }
   };
 
   return (
@@ -55,9 +74,8 @@ const ContactFormModal = ({ show, handleClose }) => {
       centered
       className="cfm-contact-modal"
     >
-      <Modal.Header closeButton  >
-      <Modal.Title style={{ color: 'white' }}>Request a Quote</Modal.Title>
-
+      <Modal.Header closeButton>
+        <Modal.Title style={{ color: 'white' }}>Request a Quote</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         {submitted ? (
@@ -91,8 +109,6 @@ const ContactFormModal = ({ show, handleClose }) => {
                 required
               />
             </Form.Group>
-
-             
 
             <Form.Group className="mb-3">
               <Form.Label>Phone</Form.Label>

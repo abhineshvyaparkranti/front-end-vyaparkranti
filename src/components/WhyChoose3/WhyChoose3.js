@@ -63,8 +63,8 @@ const fetchBannerData = async () => {
 
     try {
         setLoading(true);
-        // const response = await axios.get(`${API_BASE_URL}/api/get-choose-data`);
-        const response = await axios.get("http://192.168.1.8:8000/api/get-choose-data")
+        const response = await axios.get(`${API_BASE_URL}/api/get-choose-data`);
+        // const response = await axios.get("http://192.168.1.12:8000/api/get-choose-data")
         // console.log('About us page data response============>:', response.data.elements);
     
         const elements = response.data.chhoseUs;

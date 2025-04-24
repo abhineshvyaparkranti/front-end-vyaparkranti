@@ -106,6 +106,7 @@ const Contactpage = () => {
         const[contact_timing, setcontact_timing] = useState("");
         const[Map_link, setMap_link] = useState("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.037650106843!2d76.98448781508391!3d28.612870082425267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0fdda4eabfb1%3A0x1b29e6f8e8722395!2sVyapar%20Kranti!5e0!3m2!1sen!2sin!4v1713436924098!5m2!1sen!2sin");
         const [error, setError] = useState(null);
+        const [international_address, setinternational_address] = useState(" 1st avneu USA");
  
     const removeTags = (htmlString) => {
         if (typeof htmlString !== "string") {
@@ -152,6 +153,7 @@ const fetchBannerData = async () => {
     
         if (elements) {
           if (elements.Address) setAddress(removeTags(elements.Address));
+          if (elements.international_address) setinternational_address(removeTags(elements.international_address));
           if (elements.mobile) setMobile(removeTags(elements.mobile));
           if (elements.mail) setMail(removeTags(elements.mail));
           if (elements.Map_link) setMap_link(removeTags(elements.Map_link));
@@ -307,13 +309,13 @@ useEffect(() => {
                                 <div className="info-box">
                                     <div className="box-inner">
                                         <div className="icon flaticon-pin"></div>
-                                        13005 Greenville Avenue <br /> California, TX 70240
+                                        {/* 13005 Greenville Avenue <br /> California, TX 70240 */}
 
-                                        {/* {loading ? (
+                                        {loading ? (
                                                 <Skeleton width={150} height={50} />
                                                 ) : (
-                                                address
-                                                )} */}
+                                                 international_address
+                                                )}
 
 
                                     </div>

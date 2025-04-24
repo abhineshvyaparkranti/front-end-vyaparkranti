@@ -13,7 +13,7 @@ const AuthorWidget = ({ socialLinks = [], onLinkClick }) => {
   useEffect(() => {
     const fetchBlogBanner = async () => {
       try {
-        const res = await axios.get("http://192.168.1.8:8000/api/blog-banner");
+        const res = await axios.get("http://192.168.1.12:8000/api/blog-banner");
         const data = res.data?.blogBanner;
 
         if (res.data?.status && data) {
