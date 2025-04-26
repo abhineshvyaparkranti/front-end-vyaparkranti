@@ -23,8 +23,8 @@ function WhyChooseUsCard() {
 
     const fetchCardsData = async () => {
         try {
-            // const response = await axios.get(`${API_BASE_URL}/api/get-card-data`);
-            const response = await axios.get(`http://192.168.1.12:8000/api/get-card-data`);
+            const response = await axios.get(`${API_BASE_URL}/api/get-card-data`);
+            // const response = await axios.get(`http://192.168.1.12:8000/api/get-card-data`);
             console.log("why choose know 4 card==============", response.data.chooseNowCard);
             if (response.data?.chooseNowCard) {
                 setCardsData(response.data.chooseNowCard);

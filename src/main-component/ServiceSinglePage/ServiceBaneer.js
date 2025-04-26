@@ -34,7 +34,8 @@ const ServiceBaneer = () => {
   useEffect(() => {
     const fetchBanner = async () => {
       try {
-        const response = await axios.get("http://192.168.1.12:8000/api/service-banner");
+        // const response = await axios.get("http://192.168.1.12:8000/api/service-banner");
+         const response = await axios.get(`${API_BASE_URL}/api/service-banner`);
         const data = response.data?.serviceBanner;
         if (response.data?.status && data) {
           setBannerImage(data.service_banner);

@@ -4,6 +4,7 @@ import axios from "axios";
 import parse from "html-react-parser";
 import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css';
+import { API_BASE_URL } from '../../api/config/apiConfig';
 
 const AuthorWidget = ({ socialLinks = [], onLinkClick }) => {
   const [bannerImage, setBannerImage] = useState("");
@@ -13,7 +14,8 @@ const AuthorWidget = ({ socialLinks = [], onLinkClick }) => {
   useEffect(() => {
     const fetchBlogBanner = async () => {
       try {
-        const res = await axios.get("http://192.168.1.12:8000/api/blog-banner");
+        // const res = await axios.get("http://192.168.1.12:8000/api/blog-banner");
+          const res = await axios.get(`${API_BASE_URL}/api/blog-banner`);
         const data = res.data?.blogBanner;
 
         if (res.data?.status && data) {
@@ -72,9 +74,9 @@ const AuthorWidget = ({ socialLinks = [], onLinkClick }) => {
           )}
         </div>
 
-        <div className="name" style={{ fontWeight: 600, fontSize: "22px", marginBottom: "10px", color: "black" }}>
+        {/* <div className="name" style={{ fontWeight: 600, fontSize: "22px", marginBottom: "10px", color: "black" }}>
           {loading ? <Skeleton width={120} /> : "Blog Author" }
-        </div>
+        </div> */}
 
         <div className="text" style={{ marginBottom: "15px", padding: "0 10px", color:"black" }}>
           {loading ? (

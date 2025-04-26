@@ -131,14 +131,14 @@ const CompanyCulture = () => {
         {/* Header */}
         <div className="cc-header text-center mb-5">
           {/* <h1 className="cc-main-title">Our Culture</h1> */}
-           <SectionTitle subTitle={'Our Culture'} />
+           <SectionTitle subTitle={' Our Values'} />
           <p className="cc-subtitle">
             We're building more than a company — we're creating a community where talented people thrive.
           </p>
         </div>
 
         {/* Navigation */}
-        <div className="cc-navigation mb-5">
+        {/* <div className="cc-navigation mb-5">
           <div className="cc-nav-container">
             <button 
               className={`cc-nav-item ${visibleSection === 'values' ? 'active' : ''}`}
@@ -146,7 +146,7 @@ const CompanyCulture = () => {
             >
               Our Values
             </button>
-            {/* <button 
+              <button 
               className={`cc-nav-item ${visibleSection === 'stories' ? 'active' : ''}`}
               onClick={() => setVisibleSection('stories')}
             >
@@ -157,9 +157,9 @@ const CompanyCulture = () => {
               onClick={() => setVisibleSection('events')}
             >
               Culture Events
-            </button> */}
+            </button> 
           </div>
-        </div>
+        </div> */}
 
         {/* Values Section */}
         {visibleSection === 'values' && (

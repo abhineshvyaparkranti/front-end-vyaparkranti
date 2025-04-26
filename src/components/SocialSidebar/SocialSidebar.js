@@ -94,6 +94,7 @@ import React, { useState, useEffect } from 'react';
 import htmlReactParser, { domToReact } from 'html-react-parser';
 import axios from "axios";
 import { API_BASE_URL } from "../../api/config/apiConfig";
+import { FaGlobe } from "react-icons/fa";
 import {
   FaShareAlt,
   FaWhatsapp,
@@ -334,8 +335,9 @@ const SocialSidebar = () => {
             <div className="sidebar-btn-bodypart   text-white"
                 onMouseEnter={() => setShowShareIcons(true)}
                 onMouseLeave={() => setShowShareIcons(false)} style={{ backgroundColor: '#652e6f' }}>
-                <FaShareAlt className="icon-bodypart" />
-                <span className="label-bodypart">Share</span>
+                {/* <FaShareAlt className="icon-bodypart" /> */}
+                <FaGlobe className="icon-bodypart" />
+                <span className="label-bodypart">Social </span>
 
                 {showShareIcons && (
                     <div className="share-icons-bodypart  px-3 py-2 rounded-start" style={{ backgroundColor: '#652e6f' }}>

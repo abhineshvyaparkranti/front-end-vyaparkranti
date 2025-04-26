@@ -183,6 +183,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from '../../api/config/apiConfig';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -200,19 +201,21 @@ const FaqSection = () => {
     };
 
     useEffect(() => {
-        axios.get('http://192.168.1.12:8000/api/get-faq-data')
-            .then((res) => {
-                if (res.data.status && res.data.success) {
-                    setFaqData(res.data.chooseNowCard);
-                }
-            })
-            .catch((err) => {
-                console.error('Error fetching FAQ:', err);
-            })
-            .finally(() => {
-                setLoading(false);
-            });
-    }, []);
+    const fetchFAQData = async () => {
+        try {
+            const response = await axios.get(`${API_BASE_URL}/api/get-faq-data`);
+            if (response.data.status && response.data.success) {
+                setFaqData(response.data.chooseNowCard);
+            }
+        } catch (err) {
+            console.error('Error fetching FAQ:', err);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    fetchFAQData();
+}, []);
 
     return (
         <section className="faq-section">

@@ -872,8 +872,28 @@ import rv3 from '../../images/background/price-pattern-1.png';
 import rv4 from '../../images/background/price-pattern-3.png';
 import rv5 from '../../images/background/price-pattern-2.png';
 import PackageComparison from '../../main-component/PricingPage/PackageComparison';
+import {
+  FaGlobe,
+  FaWordpress,
+  FaUsers,
+  FaHdd,
+  FaSitemap,
+  FaLock,
+  FaCloudUploadAlt,
+  FaDatabase,
+  FaEnvelope,
+  FaTools,
+  FaCogs,
+  FaRocket,
+  FaHeadset,
+  FaShieldAlt,
+  FaChartLine,
+  FaChevronUp,
+} from 'react-icons/fa';
+import { FaChevronDown } from 'react-icons/fa';
 
-const Pricing = (props) => {
+
+const Pricing = (props, { showLearnMore }) => {
     const [activeTab, setActiveTab] = useState('1');
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
     const [packages, setPackages] = useState([]);
@@ -883,6 +903,25 @@ const Pricing = (props) => {
     const [isHover, setIsHover] = useState(false);
     const [selectedForComparison, setSelectedForComparison] = useState([]);
     const [comparisonModalOpen, setComparisonModalOpen] = useState(false);
+
+
+    const features = [
+            { text: '25 websites', icon: <FaGlobe /> },
+            { text: 'Managed hosting for WordPress', icon: <FaWordpress /> },
+            { text: '25,000 visits monthly', icon: <FaUsers /> },
+            { text: '25 GB SSD storage', icon: <FaHdd /> },
+            { text: '400 CMS pages and directories', icon: <FaSitemap /> },
+            { text: 'Free SSL certificate', icon: <FaLock /> },
+            { text: 'Daily backups', icon: <FaCloudUploadAlt /> },
+            { text: 'Unlimited MySQL databases', icon: <FaDatabase /> },
+            { text: 'Business email accounts', icon: <FaEnvelope /> },
+            { text: '1-click staging environment', icon: <FaTools /> },
+            { text: 'Auto plugin & theme updates', icon: <FaCogs /> },
+            { text: 'Blazing fast CDN', icon: <FaRocket /> },
+            { text: '24/7 expert support', icon: <FaHeadset /> },
+            { text: 'Malware scanning & removal', icon: <FaShieldAlt /> },
+            { text: 'Advanced performance monitoring', icon: <FaChartLine /> },
+            ];
 
     const buttonStyle = {
         backgroundColor: isHover ? '#ff8c00' : '#ff8c00',
@@ -1165,6 +1204,12 @@ const Pricing = (props) => {
         // Use state to track hover for this specific card
         const [isCardHover, setIsCardHover] = useState(false);
         const isSelected = selectedForComparison.some(pkg => pkg.id === item.id);
+         const [expanded, setExpanded] = useState(false);
+
+         const visibleFeatures = expanded ? features : features.slice(0, 5);
+
+           
+
         
         return (
             <div className={`price-block ${item.active || ''}`}>
@@ -1180,6 +1225,41 @@ const Pricing = (props) => {
                             : 'Loading...'
                         }
                     </ul>
+                 {/* <ul className="price-list">
+                    {visibleFeatures.map((feature, index) => (
+                        <li className="feature-item" key={index}>
+                        <div className="d-flex align-items-center">
+                            <span
+                            style={{
+                                color: '#4CAF50',
+                                marginRight: '8px',
+                                minWidth: '16px',
+                            }}
+                            >
+                            {feature.icon}
+                            </span>
+                            <span>{feature.text}</span>
+                        </div>
+                        </li>
+                    ))}
+
+                    <li className="text-center mt-2">
+                        <button
+                        className="btn btn-sm btn-link d-block w-100 text-center p-0"
+                        onClick={() => setExpanded(!expanded)}
+                        >
+                        {expanded ? (
+                            <>
+                            Show less <FaChevronUp />
+                            </>
+                        ) : (
+                            <>
+                            See all features <FaChevronDown />
+                            </>
+                        )}
+                        </button>
+                    </li>
+                    </ul> */}
                     <div className="d-flex justify-content-between mt-2">
                         <button 
                             className={`theme-btn ${item.btnClass}`} 
