@@ -124,12 +124,20 @@ const About = ({ showReadMore = true, showLearnMore = true }) => {
                                             src={aboutData.image || abimg}
                                             alt={aboutData.title}
                                             className="img-fluid"
+                                            // style={{ 
+                                            //     objectFit: 'contain',
+                                            //     width: '100%',
+                                            //     height: '400px',
+                                            //     objectPosition: 'center'
+                                            // }}
                                             style={{ 
-                                                objectFit: 'cover',
-                                                width: '100%',
-                                                height: '400px',
-                                                objectPosition: 'center'
-                                            }}
+                                                        objectFit: 'contain',
+                                                        width: '100%',
+                                                        height: '500px',       // This can stay as your default height
+                                                        minHeight: '500px',    // Minimum height
+                                                        maxHeight: '500px',    // Maximum height
+                                                        objectPosition: 'center'
+                                                        }}
                                             onError={(e) => {
                                                 e.target.onerror = null;
                                                 e.target.src = abimg; // Fallback image

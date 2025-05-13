@@ -62,7 +62,7 @@ const AllRoute = () => {
           <Route path='price' element={<PricingPage />} />
           <Route path="services" element={<ServicePage />} />
           {/* <Route path="service-single/:slug" element={<ServiceSinglePage />} /> */}
-          <Route path="service-single/:id" element={<ServiceSinglePage />} />
+          <Route path="service-single/:slug" element={<ServiceSinglePage />} />
 
           <Route path="projects" element={<ProjectPage />} />
           <Route path="projects-left-sidebar" element={<ProjectLeftPage />} />

@@ -143,10 +143,17 @@ const ServiceSection = ({ services = [], onClick, limit = 6 }) => {
       <ul className="service-list">
         {(displayServices || []).slice(0, limit).map((service, index) => (
           <li key={index}>
-            <Link onClick={onClick || ClickHandler} to={`/services`}>
+            {/* <Link onClick={onClick || ClickHandler} to={`/services`}>
               <span className="color-layer"></span>
               {service.sTitle}
-            </Link>
+            </Link> */}
+              <Link 
+              onClick={ClickHandler} 
+              to={`/service-single/${service.slug}`}
+              state={{ serviceData: service }}
+          >
+              {service.sTitle}
+          </Link>
           </li>
         ))}
       </ul>

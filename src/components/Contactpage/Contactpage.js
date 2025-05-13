@@ -107,6 +107,8 @@ const Contactpage = () => {
         const[Map_link, setMap_link] = useState("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.037650106843!2d76.98448781508391!3d28.612870082425267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0fdda4eabfb1%3A0x1b29e6f8e8722395!2sVyapar%20Kranti!5e0!3m2!1sen!2sin!4v1713436924098!5m2!1sen!2sin");
         const [error, setError] = useState(null);
         const [international_address, setinternational_address] = useState(" 1st avneu USA");
+        const [mapUrl, setMapUrl] = useState('');
+   
  
     const removeTags = (htmlString) => {
         if (typeof htmlString !== "string") {
@@ -150,6 +152,7 @@ const fetchBannerData = async () => {
     
         const elements = response.data.elements;
          console.log('Contact page  data response============>:', response.data.elements);
+         
     
         if (elements) {
           if (elements.Address) setAddress(removeTags(elements.Address));
@@ -184,6 +187,57 @@ const fetchBannerData = async () => {
 useEffect(() => {
     fetchBannerData();
 }, []);
+
+
+useEffect(() => {
+    // Function to fetch map data from your API
+    const fetchMapData = async () => {
+      try {
+        setLoading(true);
+        // Replace with your actual API endpoint
+        // const response = await axios.get('your-api-endpoint');
+        const response = await axios.get(`${API_BASE_URL}/api/contact-element`);
+        console.log('Contact page data response============>:', response.data.elements);
+        
+        // Assuming the API returns a map_link property
+        const rawMapLink = response.data.elements.Map_link;
+        
+        // Convert the place URL to an embed URL
+        const embedUrl = convertToEmbedUrl(rawMapLink);
+        
+        setMapUrl(embedUrl);
+        setLoading(false);
+      } catch (err) {
+        setError('Failed to load map data');
+        setLoading(false);
+        console.error('Error fetching map data:', err);
+      }
+    };
+
+    fetchMapData();
+  }, []);
+
+  // Function to convert a Google Maps place URL to an embed URL
+  const convertToEmbedUrl = (url) => {
+    // Extract the place ID if present
+    const placeIdMatch = url.match(/place\/[^\/]+\/@?([\d\.-]+),([\d\.-]+)/);
+    
+    if (placeIdMatch) {
+      // For URLs with place information
+      const locationName = url.split('/place/')[1].split('/')[0];
+      const lat = url.match(/@([\d\.-]+),([\d\.-]+)/)[1];
+      const lng = url.match(/@([\d\.-]+),([\d\.-]+)/)[2];
+      
+      return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus`;
+    } else {
+      // Fallback to the original URL if we can't parse it
+      return url;
+    }
+  };
+
+  if (loading) return <div>Loading map...</div>;
+  if (error) return <div>{error}</div>;
+
 
     return (
         <div>
@@ -348,6 +402,7 @@ useEffect(() => {
 
                     <div className="map-boxed">
                         <div className="map-outer">
+                        
                             <iframe
                             // src={Map_link}
                             src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.037650106843!2d76.98448781508391!3d28.612870082425267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0fdda4eabfb1%3A0x1b29e6f8e8722395!2sVyapar%20Kranti!5e0!3m2!1sen!2sin!4v1713436924098!5m2!1sen!2sin"}
@@ -359,6 +414,18 @@ useEffect(() => {
                             ></iframe>
                              {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.037650106843!2d76.98448781508391!3d28.612870082425267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0fdda4eabfb1%3A0x1b29e6f8e8722395!2sVyapar%20Kranti!5e0!3m2!1sen!2sin!4v1713436924098!5m2!1sen!2sin"></iframe>
                               */}
+                               {/* {mapUrl && (
+                                <iframe 
+                                src={mapUrl}
+                                width="100%" 
+                                height="560" 
+                                frameBorder="0" 
+                                allowFullScreen 
+                                loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Google Maps Location"
+                                />
+                            )} */}
                         </div>
                     </div>
                 </div>

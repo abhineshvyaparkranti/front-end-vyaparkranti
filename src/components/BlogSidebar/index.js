@@ -321,10 +321,10 @@ const BlogSidebar = (props) => {
         <div className={`sidebar-side col-lg-4 col-md-12 col-sm-12 ${props.blLeft}`}>
             <aside className="sidebar sticky-top">
                 {/* Categories */}
-                <div className="sidebar-widget categories-widget">
-                    <div className="sidebar-title"><h4>Categories</h4></div>
+                {/* <div className="sidebar-widget categories-widget">
+                    <div className="sidebar-title"><h4>Service Categories</h4></div>
                     {renderServiceList()}
-                </div>
+                </div> */}
 
                 {/* Recent Posts */}
                 <div className="sidebar-widget popular-posts">

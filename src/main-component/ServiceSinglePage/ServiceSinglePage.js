@@ -1059,7 +1059,7 @@ const ServiceSinglePage = (props) => {
                                             <div dangerouslySetInnerHTML={{ __html: displayService.content }} />
                                         ) : (
                                             <>
-                                                <h4>Features</h4>
+                                                {/* <h4>Features</h4> */}
                                                 <p>
                                                     {displayService?.des || "Having been around for over a decade, Basecamp is considered a reliable tool that excels at giving organizations a high-level view of their teams. Like Asana, Basecamp can help monitor tracking, but also offers additional features like direct messaging chats, centralized document storage, and a scheduling tool.Basecamp aims to take on Slack, Asana, Google Drive, and Dropbox by melding all of their competitors into one robust management tool."}
                                                 </p>
@@ -1084,7 +1084,7 @@ const ServiceSinglePage = (props) => {
                                         )}
                                         
                                         {/* Service images gallery */}
-                                        {displayService?.service_images && displayService.service_images.length > 0 && (
+                                        {/* {displayService?.service_images && displayService.service_images.length > 0 && (
                                             <div className="service-gallery mt-5">
                                                 <h3>Gallery</h3>
                                                 <div className="row">
@@ -1101,7 +1101,7 @@ const ServiceSinglePage = (props) => {
                                                     ))}
                                                 </div>
                                             </div>
-                                        )}
+                                        )} */}
                                     </div>
                                 </div>
                             </div>

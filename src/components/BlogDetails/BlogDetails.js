@@ -436,21 +436,21 @@ const BlogSingle = () => {
                             </div> */}
 
                             {/* Comment Section with Load More */}
-                            <div className="comments-section mt-4">
+                            {/* <div className="comments-section mt-4">
                         <h3 className="mb-4">Comments</h3>
 
-                        {/* Comment listing */}
+                        
                         {comment.slice(0, visibleComments).map((item) => (
                             <div key={item.id} className="card mb-3">
                             <div className="card-body d-flex">
-                                {/* Profile Icon */}
+                                 
                                 <div className="me-3">
                                 <div className="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center" style={{ width: '50px', height: '50px', fontSize: '20px' }}>
                                     <i className="fa fa-user"></i>
                                 </div>
                                 </div>
 
-                                {/* Comment Content */}
+                                
                                 <div>
                                 <h5 className="card-title mb-1">
                                     {item.first_name} {item.last_name}
@@ -462,7 +462,7 @@ const BlogSingle = () => {
                             </div>
                         ))}
 
-                        {/* Load More Button */}
+                        
                         {comment.length > visibleComments && (
                             <div className="text-center">
                             <button
@@ -473,7 +473,7 @@ const BlogSingle = () => {
                             </button>
                             </div>
                         )}
-                        </div>
+                        </div> */}
 
 
                             {/* Comment Section */}
@@ -538,8 +538,12 @@ const BlogSingle = () => {
                               </div> */}
 
                  
-                             
-                         <CommentReviewForm blogId={id} />
+                             {/* comment part start */}
+                         {/* <CommentReviewForm blogId={id} /> */}
+
+
+                         {/* comment part end */}
+
                          {/* <CommentReviewForm blogId={singleBlog.id} /> */}
 
 
