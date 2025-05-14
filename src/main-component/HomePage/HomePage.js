@@ -37,7 +37,10 @@ const HomePage = () => {
             <SeoSection />
             <TeamSection />
             <Testimonial />
-            <Pricing />
+            {/* package start */}
+            {/* <Pricing /> */}
+
+            {/* package end */}
             <PartnerSection />
             <BlogSection />
             <Footer fClass={'style-three'}/>

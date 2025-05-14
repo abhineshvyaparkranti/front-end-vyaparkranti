@@ -1,4 +1,4 @@
-export const API_BASE_URL = "https://reactest.vyaparkranti.in/api";
+export const API_BASE_URL = "https://www.vyaparkranti.com/laravel";
 export const API_ENDPOINTS = {
   TEST_DATA: "/api/api/get-test-data",
 };
