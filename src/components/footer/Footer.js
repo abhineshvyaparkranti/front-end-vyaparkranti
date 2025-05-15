@@ -257,11 +257,11 @@ const Footer = (props) => {
     const fetchBannerData = async () => {
         try {
             setLoading(true);
-            const response = await axios.get(`${API_BASE_URL}/api/contact-element`);
-            console.log('Contact page data response============>:', response.data.elements);
+            const response = await axios.get(`${API_BASE_URL}/api/home-elements`);
+            console.log('Footer page data response============>:', response.data.elements);
 
             const elements = response.data.elements;
-            console.log('Contact page  data response============>:', response.data.elements);
+            console.log('Footer page  data response============>:', response.data.elements);
 
             if (elements) {
                 if (elements.Address) setAddress(removeTags(elements.Address));

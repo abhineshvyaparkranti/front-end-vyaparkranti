@@ -284,7 +284,7 @@ const Header = (props) => {
       </div>
       
       <ContactFormModal show={showModal} handleClose={() => setShowModal(false)} />
-                            <div onClick={() => setSearchState(!searchActive)} className="search-box-btn search-box-outer"><span className="icon fa fa-search"></span></div>
+                            {/* <div onClick={() => setSearchState(!searchActive)} className="search-box-btn search-box-outer"><span className="icon fa fa-search"></span></div> */}
                         </div>
                     </div>
 

@@ -318,14 +318,14 @@ useEffect(() => {
                                                 mobile
                                                 )} </a>
                                         <br />
-                                        <a href="mailto:mail@example.com">
+                                        {/* <a href="mailto:mail@example.com">
                                         {loading ? (
                                                 <Skeleton width={150} height={20} />
                                                 ) : (
                                                 mail
                                                 )}
                                             
-                                             </a>
+                                             </a> */}
                                         {/* <div className="icon flaticon-phone-call"></div>
                                         {loading ? (
                                         <div className="shadow p-3 rounded bg-white d-inline-block">
