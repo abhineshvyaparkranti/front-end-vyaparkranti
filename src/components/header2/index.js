@@ -133,7 +133,7 @@ const Header2 = (props) => {
 														<li><Link onClick={ClickHandler} to="/blog">Our Blog</Link></li>
 														<li><Link onClick={ClickHandler} to="/blog-classNameic">Blog classNameic</Link></li>
 														<li><Link onClick={ClickHandler} to="/blog-left-sidebar">Blog Left Sidebar</Link></li>
-														<li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Blog Single</Link></li>
+														<li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Blog Single</Link></li>
 														<li><Link onClick={ClickHandler} to="/not-found">Not Found</Link></li>
 													</ul>
 												</div>
@@ -165,7 +165,7 @@ const Header2 = (props) => {
 											<li><Link onClick={ClickHandler} to="/blog">Our Blog</Link></li>
 											<li><Link onClick={ClickHandler} to="/blog-classNameic">Blog classNameic</Link></li>
 											<li><Link onClick={ClickHandler} to="/blog-left-sidebar">Blog Left Sidebar</Link></li>
-											<li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Blog Single</Link></li>
+											<li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Blog Single</Link></li>
 											<li><Link onClick={ClickHandler} to="/not-found">Not Found</Link></li>
 										</ul>
 									</li>

@@ -5662,6 +5662,7 @@ img {
 
 .price-block .inner-box .price-list {
 	position: relative;
+	text-align: left;
 	margin-top: 35px;
 	margin-bottom: 30px;
 }

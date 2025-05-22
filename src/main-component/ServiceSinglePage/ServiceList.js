@@ -94,11 +94,11 @@ const ServiceSection = ({ services = [], onClick, limit = 6 }) => {
           }
 
           return {
-            id: service.id,
+            slug: service.slug,
             sTitle: service.service_name || 'Service',
             des: removeTags(service.short_desc) || 'Service description',
             Icon: (Services[index % Services.length] || {}).Icon || DEFAULT_ICON,
-            slug: service.id.toString(),
+            slug: service.slug.toString(),
             banner_image: service.banner_image,
             service_images: serviceImages,
             service_details: service.service_details || '',

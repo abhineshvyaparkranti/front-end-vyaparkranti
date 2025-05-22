@@ -1,0 +1,68 @@
+ /* Scoped to only affect ContactFormModalTwo */
+.services-modal-wrapper {
+  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.services-modal-wrapper .services-modal-title {
+  background-color: rgb(101, 46, 111);
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.services-modal-wrapper .form-control {
+  height: 48px;
+  margin-top: 10px;
+  border: 1px solid #ced4da !important;
+  /* border-bottom: none !important; */
+  border-radius: 6px;
+  box-shadow: none;
+  transition: border-color 0.3s ease;
+}
+
+.services-modal-wrapper .form-control:focus {
+  border-color: #652e6f;
+  box-shadow: 0 0 0 0.2rem rgba(101, 46, 111, 0.25);
+}
+
+.services-modal-wrapper textarea.form-control {
+  height: auto;
+  resize: vertical;
+}
+
+.services-modal-wrapper .cfm-button-group {
+  margin-top: 20px;
+}
+
+.services-modal-wrapper .cfm-submit-btn,
+.services-modal-wrapper .cfm-cancel-btn {
+  min-width: 100px;
+}
+
+@media (max-width: 576px) {
+  .services-modal-wrapper {
+    padding: 20px 15px;
+  }
+
+  .services-modal-wrapper .cfm-button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .services-modal-wrapper .cfm-submit-btn,
+  .services-modal-wrapper .cfm-cancel-btn {
+    width: 100%;
+  }
+}

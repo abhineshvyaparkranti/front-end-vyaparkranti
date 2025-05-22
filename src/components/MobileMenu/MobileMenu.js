@@ -275,7 +275,7 @@ const menus = [
     //         {
     //             id: 54,
     //             title: 'Blog Single',
-    //             link: '/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links'
+    //             link: '/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links'
     //         },
     //         {
     //             id: 55,
@@ -284,6 +284,12 @@ const menus = [
     //         }
     //     ]
     // },
+
+     {
+        id: 8,
+        title: 'Hosting',
+        link: '/package-page',
+    },
         {
         id: 3,
         title: 'Technology',

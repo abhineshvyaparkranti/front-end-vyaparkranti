@@ -68,18 +68,18 @@
 //                                             <div className="pull-left">
 //                                                 <div className="post-title">Tags:</div>
 //                                                 <ul className="tags">
-//                                                     <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">App,</Link></li>
-//                                                     <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Agencyco,</Link></li>
-//                                                     <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">History,</Link></li>
-//                                                     <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Blue,</Link></li>
-//                                                     <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Gold</Link></li>
+//                                                     <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">App,</Link></li>
+//                                                     <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Agencyco,</Link></li>
+//                                                     <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">History,</Link></li>
+//                                                     <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Blue,</Link></li>
+//                                                     <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Gold</Link></li>
 //                                                 </ul>
 //                                             </div>
 //                                             <ul className="social-box pull-right">
-//                                                 <li className="facebook"><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-facebook-f"></span></Link></li>
-//                                                 <li className="twitter"><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-twitter"></span></Link></li>
-//                                                 <li className="linkedin"><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-google-plus"></span></Link></li>
-//                                                 <li className="pinterest"><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-pinterest-p"></span></Link></li>
+//                                                 <li className="facebook"><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-facebook-f"></span></Link></li>
+//                                                 <li className="twitter"><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-twitter"></span></Link></li>
+//                                                 <li className="linkedin"><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-google-plus"></span></Link></li>
+//                                                 <li className="pinterest"><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-pinterest-p"></span></Link></li>
 //                                             </ul>
 //                                         </div>
 //                                     </div>
@@ -93,10 +93,10 @@
 //                                     <h4 className="name">Manika Rock</h4>
 //                                     <div className="text">He is attended the State University of New York at Oswego where he majored in English Literature and Creative Writing.</div>
 //                                     <ul className="social-icon clearfix">
-//                                         <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><i className="fa fa-facebook-f"></i></Link></li>
-//                                         <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><i className="fa fa-google-plus"></i></Link></li>
-//                                         <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><i className="fa fa-twitter"></i></Link></li>
-//                                         <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><i className="fa fa-linkedin"></i></Link></li>
+//                                         <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><i className="fa fa-facebook-f"></i></Link></li>
+//                                         <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><i className="fa fa-google-plus"></i></Link></li>
+//                                         <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><i className="fa fa-twitter"></i></Link></li>
+//                                         <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><i className="fa fa-linkedin"></i></Link></li>
 //                                     </ul>
 //                                 </div>
 //                             </div>
@@ -143,29 +143,29 @@
 //                                 <div className="rating-box">
 //                                     <div className="text"> Your Rating:</div>
 //                                     <div className="rating">
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
 //                                     </div>
 //                                     <div className="rating">
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
 //                                     </div>
 //                                     <div className="rating">
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
 //                                     </div>
 //                                     <div className="rating">
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
 //                                     </div>
 //                                     <div className="rating">
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-//                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+//                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
 //                                     </div>
 //                                 </div>
 //                                 <form method="post" onSubmit={submitHandler}>
@@ -225,7 +225,7 @@ import styles from './Blog.module.css';
 import CommentReviewForm from './CommentReviewForm';
 
 const BlogSingle = () => {
-    const { id } = useParams();
+    const { slug } = useParams();
     const [blogData, setBlogData] = useState(null);
     const [blog, setBlog] = useState(null);
      const [comment, setComment] = useState(null);
@@ -242,7 +242,7 @@ const BlogSingle = () => {
         const fetchBlogDetails = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get(`${API_BASE_URL}/api/blog-details/${id}`);
+                const response = await axios.get(`${API_BASE_URL}/api/blog-details/${slug}`);
                 if (response.data.blog) {
                     console.log("Blog data details page============>:", response.data.blog);
                     setBlog(response.data.blog);
@@ -263,8 +263,8 @@ const BlogSingle = () => {
             }
         };
 
-        if (id) fetchBlogDetails();
-    }, [id]);
+        if (slug) fetchBlogDetails();
+    }, [slug]);
 
     const formatDate = (dateString) => {
         if (!dateString) return '';
@@ -483,29 +483,29 @@ const BlogSingle = () => {
                              <div className="rating-box">
                                   <div className="text"> Your Rating:</div>
                                    <div className="rating">
-                                    <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                    <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
                             </div>
                                <div className="rating">
-                                     <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-                                  <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                     <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                  <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
                              </div>
                                  <div className="rating">
-                                 <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                 <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
                                     </div>
                                     <div className="rating">
-                                       <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-                                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-                                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                       <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
                                      </div>
                                      <div className="rating">
-                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-                                       <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-                                     <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
-                                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                       <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                     <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
+                                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links"><span className="fa fa-star"></span></Link>
                                     </div>
                                 </div>
                                  <form method="post" onSubmit={submitHandler}>

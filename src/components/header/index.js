@@ -176,6 +176,7 @@ const Header = (props) => {
                                         </ul> */}
                                     </li>
                                     <li className="dropdown"><Link onClick={ClickHandler} to="/services">Services</Link> </li>
+                                      <li className="dropdown"><Link onClick={ClickHandler} to="/package-page">Hosting</Link> </li>
                                     {/* <li className="dropdown"><Link onClick={ClickHandler} to="/services">Services</Link>
                                         <ul>
                                             <li><Link onClick={ClickHandler} to="/services">Services</Link></li>
@@ -233,7 +234,7 @@ const Header = (props) => {
                                                         <li><Link onClick={ClickHandler} to="/blog">dumy</Link></li>
                                                         <li><Link onClick={ClickHandler} to="/blog-classNameic">dumy</Link></li>
                                                         <li><Link onClick={ClickHandler} to="/blog-left-sidebar">dumy</Link></li>
-                                                        <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Blog Single</Link></li>
+                                                        <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Blog Single</Link></li>
                                                         <li><Link onClick={ClickHandler} to="/not-found">Not Found</Link></li>
                                                         
                                                     </ul>
@@ -257,7 +258,7 @@ const Header = (props) => {
                                             <li><Link onClick={ClickHandler} to="/blog">Our Blog</Link></li>
                                             <li><Link onClick={ClickHandler} to="/blog-classNameic">Blog classNameic</Link></li>
                                             <li><Link onClick={ClickHandler} to="/blog-left-sidebar">Blog Left Sidebar</Link></li>
-                                            <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Blog Single</Link></li>
+                                            <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Blog Single</Link></li>
                                             <li><Link onClick={ClickHandler} to="/dashboard">Dashboard</Link></li>
                                             <li><Link onClick={ClickHandler} to="/not-found">Not Found</Link></li>
                                         </ul>
@@ -278,12 +279,12 @@ const Header = (props) => {
                                 <Link onClick={ClickHandler} to="/contact" className="theme-btn btn-style-one"><span className="txt">Get A Quote</span></Link>
                             </div> */}
                                  <div className="btn-box">
-        <Link onClick={ClickHandlerModal} to="/ContactFormModal" className="theme-btn btn-style-one">
-          <span className="txt">Get A Quote</span>
-        </Link>
-      </div>
-      
-      <ContactFormModal show={showModal} handleClose={() => setShowModal(false)} />
+                            <Link onClick={ClickHandlerModal} to="/ContactFormModal" className="theme-btn btn-style-one">
+                            <span className="txt">Get A Quote</span>
+                            </Link>
+                            </div>
+
+                            <ContactFormModal show={showModal} handleClose={() => setShowModal(false)} />
                             {/* <div onClick={() => setSearchState(!searchActive)} className="search-box-btn search-box-outer"><span className="icon fa fa-search"></span></div> */}
                         </div>
                     </div>

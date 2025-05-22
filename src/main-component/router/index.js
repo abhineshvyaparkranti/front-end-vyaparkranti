@@ -85,8 +85,8 @@ const AllRoute = () => {
           <Route path='blog-left-sidebar' element={<BlogPageLeft />} />
           <Route path='blog-classNameic' element={<BlogListPage />} />
           <Route path='blog' element={<BlogPage />} />
-          {/* <Route path='blog-single/:slug' element={<BlogDetails />} /> */}
-          <Route path='blog-single/:id' element={<BlogDetails />} />
+          {/* <Route path='blog-details/:slug' element={<BlogDetails />} /> */}
+          <Route path='blog-details/:slug' element={<BlogDetails />} />
           {/* <Route path="/careers" component={CareerPage} /> */}
           <Route path='/careers' element={<CareersPage />} />
           <Route path='/dashboard' element={<Dashboard />} />
@@ -98,7 +98,7 @@ const AllRoute = () => {
             {/* <Route path='/faq' element={<Faq />} /> */}
 
 
-          {/* <Route path="/blog-single/:id" element={<BlogSingletest />} /> */}
+          {/* <Route path="/blog-details/:id" element={<BlogSingletest />} /> */}
 
 
         </Routes>

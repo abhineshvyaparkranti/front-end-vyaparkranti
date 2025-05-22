@@ -35,17 +35,17 @@
 //                                     <div className="overlay-box">
 //                                         <div className="overlay-inner">
 //                                             <div className="content">
-//                                                 <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`} className="icon flaticon-unlink"></Link>
+//                                                 <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`} className="icon flaticon-unlink"></Link>
 //                                             </div>
 //                                         </div>
 //                                     </div>
 //                                 </div>
 //                                 <div className="lower-content">
 //                                     <ul className="post-meta">
-//                                         <li><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}><span className="icon fa fa-user"></span> {blog.author}</Link></li>
-//                                         <li><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}><span className="icon fa fa-calendar"></span> {blog.create_at}</Link></li>
+//                                         <li><Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}><span className="icon fa fa-user"></span> {blog.author}</Link></li>
+//                                         <li><Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}><span className="icon fa fa-calendar"></span> {blog.create_at}</Link></li>
 //                                     </ul>
-//                                     <h5><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>{blog.title}</Link></h5>
+//                                     <h5><Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>{blog.title}</Link></h5>
 //                                 </div>
 //                             </div>
 //                         </div>
@@ -282,7 +282,7 @@ const BlogSection = () => {
                                     <div className="overlay-box">
                                         <div className="overlay-inner">
                                             <div className="content">
-                                                <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`} className="icon flaticon-unlink"></Link>
+                                                <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`} className="icon flaticon-unlink"></Link>
                                             </div>
                                         </div>
                                     </div>
@@ -290,17 +290,17 @@ const BlogSection = () => {
                                 <div className="lower-content" style={{ flex: '1' }}>
                                     <ul className="post-meta">
                                         <li>
-                                            <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>
+                                            <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>
                                                 <span className="icon fa fa-user"></span> Admin
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>
+                                            <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>
                                                 <span className="icon fa fa-calendar"></span> {new Date(blog.blog_date).toLocaleDateString()}
                                             </Link>
                                         </li>
                                     </ul>
-                                    <h5><Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>{blog.title}</Link></h5>
+                                    <h5><Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>{blog.title}</Link></h5>
                                 </div>
                             </div>
                         </div>

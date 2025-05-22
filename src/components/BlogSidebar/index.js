@@ -94,8 +94,8 @@
 //                     <div className="widget-content">
 //                         {blogs.slice(0, 3).map((blog, Bitem) => (
 //                             <article className="post" key={Bitem}>
-//                                 <figure className="post-thumb"><img src={blog.screens} alt="" /><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`} className="overlay-box"><span className="icon fa fa-link"></span></Link></figure>
-//                                 <div className="text"><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>{blog.title}</Link></div>
+//                                 <figure className="post-thumb"><img src={blog.screens} alt="" /><Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`} className="overlay-box"><span className="icon fa fa-link"></span></Link></figure>
+//                                 <div className="text"><Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>{blog.title}</Link></div>
 //                                 <div className="post-info">{blog.create_at}</div>
 //                             </article>
 //                         ))}
@@ -110,10 +110,10 @@
 //                         <div className="name">Pablo Villalpando</div>
 //                         <div className="text">I got lucky because I never gave up the search. Are you quitting too soon? Or, are you willing to pursue luck with a vengeance?</div>
 //                         <ul className="social-box">
-//                             <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-facebook-f"></Link></li>
-//                             <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-linkedin"></Link></li>
-//                             <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-twitter"></Link></li>
-//                             <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-google"></Link></li>
+//                             <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-facebook-f"></Link></li>
+//                             <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-linkedin"></Link></li>
+//                             <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-twitter"></Link></li>
+//                             <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-google"></Link></li>
 //                         </ul>
 //                     </div>
 //                 </div>
@@ -136,15 +136,15 @@
 //                         <h4>Tags</h4>
 //                     </div>
 //                     <div className="widget-content">
-//                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Business</Link>
-//                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Marketing</Link>
-//                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">SEO</Link>
-//                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">SEO</Link>
-//                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">SMM</Link>
-//                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Solution</Link>
-//                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Tips</Link>
-//                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Startup</Link>
-//                         <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Strategy</Link>
+//                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Business</Link>
+//                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Marketing</Link>
+//                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">SEO</Link>
+//                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">SEO</Link>
+//                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">SMM</Link>
+//                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Solution</Link>
+//                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Tips</Link>
+//                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Startup</Link>
+//                         <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Strategy</Link>
 //                     </div>
 //                 </div> */}
 
@@ -301,14 +301,14 @@ const BlogSidebar = (props) => {
                     />
                     <Link 
                         onClick={ClickHandler} 
-                        to={`/blog-single/${blog.id}`} 
+                        to={`/blog-details/${blog.slug}`} 
                         className="overlay-box"
                     >
                         <span className="icon fa fa-link"></span>
                     </Link>
                 </figure>
                 <div className="text">
-                    <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>
+                    <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>
                         {blog.title}
                     </Link>
                 </div>
@@ -343,10 +343,10 @@ const BlogSidebar = (props) => {
                             I got lucky because I never gave up the search. Are you quitting too soon? Or, are you willing to pursue luck with a vengeance?
                         </div>
                         <ul className="social-box">
-                            <li><Link onClick={ClickHandler} to="/blog-single/sample-1" className="fa fa-facebook-f"></Link></li>
-                            <li><Link onClick={ClickHandler} to="/blog-single/sample-2" className="fa fa-linkedin"></Link></li>
-                            <li><Link onClick={ClickHandler} to="/blog-single/sample-3" className="fa fa-twitter"></Link></li>
-                            <li><Link onClick={ClickHandler} to="/blog-single/sample-4" className="fa fa-google"></Link></li>
+                            <li><Link onClick={ClickHandler} to="/blog-details/sample-1" className="fa fa-facebook-f"></Link></li>
+                            <li><Link onClick={ClickHandler} to="/blog-details/sample-2" className="fa fa-linkedin"></Link></li>
+                            <li><Link onClick={ClickHandler} to="/blog-details/sample-3" className="fa fa-twitter"></Link></li>
+                            <li><Link onClick={ClickHandler} to="/blog-details/sample-4" className="fa fa-google"></Link></li>
                         </ul>
                     </div>
                 </div> */}

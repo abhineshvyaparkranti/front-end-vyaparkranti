@@ -12,8 +12,9 @@ const PricingPage = (props) => {
     return (
         <Fragment>
             <Navbar />
-            <PageTitle pageTitle={'Pricing Plan'} pagesub={'Pricing'} />
-            <Pricing sClass={'style-two'}/>
+            <PageTitle pageTitle={'Hosting Plan'} pagesub={'Hosting'} />
+            {/* <Pricing sClass={'style-two'}/> */}
+            <Pricing sClass={'style-two'} showCompare={true} />
             <PackageComparison />
             <Subscribe />
             <Footer/>

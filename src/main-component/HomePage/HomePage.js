@@ -35,10 +35,11 @@ const HomePage = () => {
             <BuildStep />
             <WhyChoose />
             <SeoSection />
-            <TeamSection />
+            {/* <TeamSection /> */}
             <Testimonial />
             {/* package start */}
             {/* <Pricing /> */}
+            <Pricing showViewAll={true} />
 
             {/* package end */}
             <PartnerSection />

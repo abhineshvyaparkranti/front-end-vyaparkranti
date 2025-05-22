@@ -49,10 +49,10 @@ const Sidebar = (props) => {
                         <div className="name">Pablo Villalpando</div>
                         <div className="text">I got lucky because I never gave up the search. Are you quitting too soon? Or, are you willing to pursue luck with a vengeance?</div>
                         <ul className="social-box">
-                            <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-facebook-f"></Link></li>
-                            <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-linkedin"></Link></li>
-                            <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-twitter"></Link></li>
-                            <li><Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-google"></Link></li>
+                            <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-facebook-f"></Link></li>
+                            <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-linkedin"></Link></li>
+                            <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-twitter"></Link></li>
+                            <li><Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links" className="fa fa-google"></Link></li>
                         </ul>
                     </div>
                 </div>
@@ -61,15 +61,15 @@ const Sidebar = (props) => {
                         <h4>Tags</h4>
                     </div>
                     <div className="widget-content">
-                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Business</Link>
-                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Marketing</Link>
-                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">SEO</Link>
-                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">SEO</Link>
-                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">SMM</Link>
-                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Solution</Link>
-                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Tips</Link>
-                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Startup</Link>
-                        <Link onClick={ClickHandler} to="/blog-single/Google-now-disregards-or-overlooks-all-reciprocal-links">Strategy</Link>
+                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Business</Link>
+                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Marketing</Link>
+                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">SEO</Link>
+                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">SEO</Link>
+                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">SMM</Link>
+                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Solution</Link>
+                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Tips</Link>
+                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Startup</Link>
+                        <Link onClick={ClickHandler} to="/blog-details/Google-now-disregards-or-overlooks-all-reciprocal-links">Strategy</Link>
                     </div>
                 </div>
 

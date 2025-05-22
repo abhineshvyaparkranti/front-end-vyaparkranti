@@ -29,7 +29,7 @@
 //     : null;
 
 //   return (
-//     <div className="blog-single">
+//     <div className="blog-details">
 //       <div className="auto-container">
 //         <h2>{blog.title}</h2>
 

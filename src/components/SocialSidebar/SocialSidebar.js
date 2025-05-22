@@ -337,7 +337,7 @@ const SocialSidebar = () => {
                 onMouseLeave={() => setShowShareIcons(false)} style={{ backgroundColor: '#652e6f' }}>
                 {/* <FaShareAlt className="icon-bodypart" /> */}
                 <FaGlobe className="icon-bodypart" />
-                <span className="label-bodypart">Social </span>
+                {/* <span className="label-bodypart">Social </span> */}
 
                 {showShareIcons && (
                     <div className="share-icons-bodypart  px-3 py-2 rounded-start" style={{ backgroundColor: '#652e6f' }}>
@@ -393,7 +393,7 @@ const SocialSidebar = () => {
             onClick={(e) => handleLinkClick(`mailto:${socialLinks.mail}`, '_blank', 'noopener,noreferrer')}
             style={{ backgroundColor: '#652e6f' }}>
             <FaEnvelope className="icon-bodypart" />
-            <span className="label-bodypart">{socialLinks.mail}</span>
+            <span className="label-bodypart" style={{fontSize: '13px'}}>{socialLinks.mail}</span>
             </a>
 
             {/* Phone */}

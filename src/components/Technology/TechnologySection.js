@@ -327,7 +327,460 @@
 // export default TechnologySection;
 
 
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
+// import { API_BASE_URL } from '../../api/config/apiConfig'; 
+// import 'animate.css';
+// import SectionTitle from '../SectionTitle/SectionTitle';
+// import BubbleSectionTechnology from './BubbleSectionTechnology';
+
+// // Skeleton loading component
+// const TechnologyCardSkeleton = () => {
+//   return (
+//     <div className="col">
+//       <div className="card h-100 shadow-sm border-0 p-3">
+//         <div className="skeleton-img mb-3" style={{ 
+//           height: '180px', 
+//           background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+//           backgroundSize: '200% 100%',
+//           animation: 'skeleton-loading 1.5s infinite' 
+//         }}></div>
+//         <div className="skeleton-title mb-2" style={{ 
+//           height: '24px', 
+//           width: '70%', 
+//           margin: '0 auto',
+//           background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+//           backgroundSize: '200% 100%',
+//           animation: 'skeleton-loading 1.5s infinite' 
+//         }}></div>
+//         <div className="skeleton-badge" style={{ 
+//           height: '18px', 
+//           width: '40%', 
+//           margin: '0 auto',
+//           background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+//           backgroundSize: '200% 100%',
+//           animation: 'skeleton-loading 1.5s infinite' 
+//         }}></div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// const TechnologySection = () => {
+//   const [technologies, setTechnologies] = useState([]);
+//   const [activeCategory, setActiveCategory] = useState('all');
+//   const [animateCards, setAnimateCards] = useState(false);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+//   const [categories, setCategories] = useState([
+//     { id: 'all', name: 'All Technologies' }
+//   ]);
+//   const [expandedTech, setExpandedTech] = useState(null);
+  
+//   // Fetch technologies from API
+//   useEffect(() => {
+//     const fetchTechnologies = async () => {
+//       try {
+//         setLoading(true);
+//         // const response = await axios.get('http://192.168.1.7:8000/api/get-technology');
+//         const response = await axios.get(`${API_BASE_URL}/api/get-technology`);
+//         console.log('Technology api response================>:', response.data.Technologys);
+        
+//         if (response.data.status && response.data.success) {
+//           setTechnologies(response.data.Technologys);
+          
+//           // Extract unique categories from the API response
+//           const uniqueCategories = [...new Set(response.data.Technologys.map(tech => tech.category))];
+          
+//           // Create category objects for filter buttons
+//           const categoryObjects = [
+//             { id: 'all', name: 'All Technologies' },
+//             ...uniqueCategories.map(category => ({
+//               id: category.toLowerCase().replace(/\s+/g, '-'),
+//               name: category
+//             }))
+//           ];
+          
+//           setCategories(categoryObjects);
+//         } else {
+//           setError('Failed to fetch technologies');
+//         }
+//       } catch (err) {
+//         setError('Error connecting to the server');
+//         console.error('Error fetching technologies:', err);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+    
+//     fetchTechnologies();
+//   }, []);
+  
+//   useEffect(() => {
+//     setAnimateCards(true);
+//     const timer = setTimeout(() => setAnimateCards(false), 800);
+//     return () => clearTimeout(timer);
+//   }, [activeCategory]);
+  
+//   // Add CSS for skeleton animation
+//   useEffect(() => {
+//     const styleSheet = document.createElement("style");
+//     styleSheet.innerText = `
+//       @keyframes skeleton-loading {
+//         0% { background-position: 200% 0; }
+//         100% { background-position: -200% 0; }
+//       }
+      
+//       @keyframes gradient-shift {
+//         0% { background-position: 0% 50%; }
+//         50% { background-position: 100% 50%; }
+//         100% { background-position: 0% 50%; }
+//       }
+      
+//       .tech-card-hover {
+//         transition: all 0.4s ease;
+//       }
+      
+//       .tech-card-hover:hover {
+//         transform: translateY(-10px);
+//         background: linear-gradient(135deg, rgba(236,72,153,0.1), rgba(124,58,237,0.1));
+//         box-shadow: 0 10px 25px rgba(124,58,237,0.2) !important;
+//         border: 1px solid rgba(236,72,153,0.3) !important;
+//       }
+      
+//       .tech-card-hover:hover .tech-image {
+//         transform: scale(1.05);
+//       }
+      
+//       .tech-image {
+//         transition: transform 0.5s ease;
+//         object-fit: contain;
+//       }
+      
+//       .tech-card-hover:hover .expand-button {
+//         background: linear-gradient(90deg, #ec4899, #7c3aed);
+//         background-size: 200% 100%;
+//         animation: gradient-shift 3s ease infinite;
+//         color: white;
+//         transform: translateY(-3px);
+//       }
+      
+//       .tech-card-hover .expand-button {
+//         transition: all 0.3s ease;
+//         background: #f8f9fa;
+//         border: 1px solid #dee2e6;
+//       }
+      
+//       .tech-description {
+//         max-height: 0;
+//         overflow: hidden;
+//         transition: max-height 0.4s ease-out;
+//       }
+      
+//       .tech-description.expanded {
+//         max-height: 500px;
+//         transition: max-height 0.6s ease-in;
+//       }
+//     `;
+//     document.head.appendChild(styleSheet);
+    
+//     return () => {
+//       document.head.removeChild(styleSheet);
+//     };
+//   }, []);
+  
+//   // Filter technologies based on active category
+//   const filteredTechnologies = activeCategory === 'all' 
+//     ? technologies 
+//     : technologies.filter(tech => {
+//         const techCategory = tech.category.toLowerCase().replace(/\s+/g, '-');
+//         return techCategory === activeCategory;
+//       });
+  
+//   // Toggle expanded tech card
+//   const toggleTechExpand = (techId) => {
+//     if (expandedTech === techId) {
+//       setExpandedTech(null);
+//     } else {
+//       setExpandedTech(techId);
+//     }
+//   };
+  
+//   // Custom CSS for animations and hover effects
+//   const styles = {
+//     buttonHover: {
+//       transition: 'all 0.3s ease',
+//     },
+//     progressBarAnimation: {
+//       transition: 'width 1.5s ease-in-out',
+//     },
+//     checklistItemHover: {
+//       transition: 'all 0.3s ease',
+//     },
+//     checklistItemHoverActive: {
+//       transform: 'translateX(10px)',
+//       color: '#0d6efd',
+//       // background: linear-gradient(to left, #6917B4 0%, #D54BE1 100%),
+//       // background: 'linear-gradient(to left, #6917B4 0%, #D54BE1 100%)',
+//     }
+//   };
+  
+//   // Render skeleton loaders
+//   const renderSkeletons = () => {
+//     return Array(8).fill(0).map((_, index) => (
+//       <TechnologyCardSkeleton key={`skeleton-${index}`} />
+//     ));
+//   };
+  
+//   if (error) {
+//     return (
+//       <section className="py-5 bg-light" id="technologies">
+//         <div className="container text-center">
+//           <div className="alert alert-danger" role="alert">
+//             {error}
+//           </div>
+//         </div>
+//       </section>
+//     );
+//   }
+  
+//   return (
+//     <section className="py-5 bg-light" id="technologies">
+//       <div className="container">
+//         <div className="row mb-5">
+//           <div className="col-12 text-center">
+//             <SectionTitle subTitle={'Our Technologies'} />
+//             <p className="text-muted lead mb-5 animate__animated animate__fadeIn animate__delay-1s">
+//               We leverage cutting-edge technologies to deliver powerful, scalable solutions
+//             </p>
+            
+//             {/* Category Tabs */}
+//             <div className="d-flex justify-content-center flex-wrap mb-4 animate__animated animate__fadeIn animate__delay-1s">
+//               {categories.map(category => (
+//                 <button
+//                 key={category.id}
+//                 className={`btn ${activeCategory === category.id ? 'btn-primary' : 'btn-outline-secondary'} m-1`}
+//                 onClick={() => setActiveCategory(category.id)}
+//                 style={styles.buttonHover}
+//                 onMouseOver={(e) => {
+//                   e.currentTarget.style.transform = 'scale(1.05)';
+//                   e.currentTarget.style.background = 'linear-gradient(to left, #6917B4 0%, #D54BE1)';
+//                 }}
+//                 onMouseOut={(e) => {
+//                   e.currentTarget.style.transform = 'scale(1)';
+//                   e.currentTarget.style.background = ''; // Reset to original background
+//                 }}
+//               >
+//                 {category.name}
+//               </button>
+
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+        
+//         {/* Technology Cards */}
+//         <div className="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+//           {loading ? renderSkeletons() : (
+//             filteredTechnologies.length > 0 ? (
+//               filteredTechnologies.map((tech, index) => (
+//                 <div 
+//                   key={tech.id} 
+//                   className={`col animate__animated ${animateCards ? 'animate__fadeIn' : ''}`}
+//                   style={{ animationDelay: `${index * 0.05}s` }}
+//                 >
+//                   <div className="card h-100 shadow-sm border-0 tech-card-hover overflow-hidden">
+//                     <div className="position-relative p-3">
+//                       <img 
+//                         src={tech.image} 
+//                         className="tech-image img-fluid mx-auto d-block"
+//                         alt={tech.tech_name}
+//                         style={{ 
+//                           height: '80px',
+//                           maxWidth: '100%',
+//                           objectPosition: 'center',
+//                         }}
+//                       />
+//                     </div>
+//                     <div className="card-body text-center pt-0">
+//                       <h5 className="card-title">{tech.tech_name}</h5>
+//                       <p className="text-muted mb-2">
+//                         <span className="badge bg-light text-dark">{tech.category}</span>
+//                       </p>
+                      
+//                       <button 
+//                         className="btn btn-sm expand-button mt-2 mb-3"
+//                         onClick={() => toggleTechExpand(tech.id)}
+//                       >
+//                         {expandedTech === tech.id ? 'Show Less' : 'Learn More'}
+//                       </button>
+                      
+//                       <div className={`tech-description ${expandedTech === tech.id ? 'expanded' : ''}`}>
+//                         <hr className="my-2" />
+//                         <div 
+//                           className="card-text text-muted small text-start" 
+//                           dangerouslySetInnerHTML={{ __html: tech.description }}
+//                         >
+//                         </div>
+//                       </div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               ))
+//             ) : (
+//               <div className="col-12 text-center py-5">
+//                 <p className="text-muted">No technologies found in this category.</p>
+//               </div>
+//             )
+//           )}
+//         </div>
+        
+//         {/* Technology Expertise */}
+//         <div className="row mt-5 pt-4">
+//           {/* <div className="col-md-6 animate__animated animate__fadeInLeft"> */}
+//             {/* <div className="p-4 bg-white rounded shadow">
+//               <h3 className="h4 mb-4">Our Technical Expertise</h3>
+              
+//               {loading ? (
+//                 // Skeleton for expertise bars
+//                 Array(5).fill(0).map((_, index) => (
+//                   <div className="mb-4" key={`expertise-skeleton-${index}`}>
+//                     <div className="d-flex justify-content-between mb-1">
+//                       <div style={{ 
+//                         height: '18px', 
+//                         width: '40%', 
+//                         background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+//                         backgroundSize: '200% 100%',
+//                         animation: 'skeleton-loading 1.5s infinite' 
+//                       }}></div>
+//                       <div style={{ 
+//                         height: '18px', 
+//                         width: '10%', 
+//                         background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+//                         backgroundSize: '200% 100%',
+//                         animation: 'skeleton-loading 1.5s infinite' 
+//                       }}></div>
+//                     </div>
+//                     <div className="progress" style={{ height: '8px', backgroundColor: '#e9ecef' }}>
+//                       <div 
+//                         style={{ 
+//                           width: '100%', 
+//                           background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+//                           backgroundSize: '200% 100%',
+//                           animation: 'skeleton-loading 1.5s infinite' 
+//                         }}
+//                         role="progressbar" 
+//                         aria-valuenow="0" 
+//                         aria-valuemin="0" 
+//                         aria-valuemax="100"
+//                       ></div>
+//                     </div>
+//                   </div>
+//                 ))
+//               ) : (
+//                 categories
+//                   .filter(cat => cat.id !== 'all')
+//                   .slice(0, 5)
+//                   .map((category, index) => {
+//                     // Calculate percentage based on number of techs in each category
+//                     const categoryTechs = technologies.filter(
+//                       tech => tech.category.toLowerCase().replace(/\s+/g, '-') === category.id
+//                     );
+//                     const percentage = Math.min(75 + (categoryTechs.length * 5), 95);
+                    
+//                     // Define a list of bootstrap colors for variety
+//                     const colors = ['primary', 'success', 'info', 'warning', 'danger'];
+                    
+//                     return (
+//                       <div className="mb-4" key={category.id}>
+//                         <div className="d-flex justify-content-between mb-1">
+//                           <span>{category.name}</span>
+//                           <span>{percentage}%</span>
+//                         </div>
+//                         <div className="progress" style={{ height: '8px' }}>
+//                           <div 
+//                             className={`progress-bar bg-${colors[index % colors.length]} progress-bar-striped progress-bar-animated`}
+//                             role="progressbar" 
+//                             style={{ ...styles.progressBarAnimation, width: `${percentage}%` }} 
+//                             aria-valuenow={percentage}
+//                             aria-valuemin="0" 
+//                             aria-valuemax="100"
+//                           ></div>
+//                         </div>
+//                       </div>
+//                     );
+//                   })
+//               )}
+//             </div> */}
+//           {/* </div> */}
+//           <div className="col-md-12 animate__animated ">
+//             <div className="p-4 bg-white rounded shadow h-100  ">
+//               <h3 className="h4 mb-4">Why Choose Our Technology Stack?</h3>
+//               <ul className="list-group list-group-flush">
+//                 {loading ? (
+//                   // Skeleton for checklist
+//                   Array(5).fill(0).map((_, index) => (
+//                     <li key={`checklist-skeleton-${index}`} className="list-group-item bg-transparent border-0 ps-0">
+//                       <div className="d-flex align-items-center">
+//                         <div className="me-2" style={{ 
+//                           height: '16px',
+//                           width: '16px',
+//                           borderRadius: '50%',
+//                           background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+//                           backgroundSize: '200% 100%',
+//                           animation: 'skeleton-loading 1.5s infinite' 
+//                         }}></div>
+//                         <div style={{ 
+//                           height: '16px',
+//                           width: '80%',
+//                           background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
+//                           backgroundSize: '200% 100%',
+//                           animation: 'skeleton-loading 1.5s infinite' 
+//                         }}></div>
+//                       </div>
+//                     </li>
+//                   ))
+//                 ) : (
+//                   [
+//                     { title: 'Scalable Solutions', desc: 'Our tech stack ensures your application can grow with your business ' },
+//                     { title: 'Performance Optimized', desc: 'We build with performance in mind from day one' },
+//                     { title: 'Security Focused', desc: 'We implement industry best practices for secure applications' },
+//                     { title: 'Modern Frameworks', desc: 'We use cutting-edge technologies that are future-proof' },
+//                     { title: 'Cross-platform Compatibility', desc: 'Our solutions work across all devices and browsers' }
+//                   ].map((item, index) => (
+//                     <li 
+//                       key={index}
+//                       className="list-group-item bg-transparent border-0 ps-0"
+//                       style={styles.checklistItemHover}
+//                       onMouseOver={(e) => {
+//                         Object.assign(e.currentTarget.style, styles.checklistItemHoverActive);
+//                       }}
+//                       onMouseOut={(e) => {
+//                         e.currentTarget.style.transform = '';
+//                         e.currentTarget.style.color = '';
+//                       }}
+//                     >
+//                       <i className="bi bi-check-circle-fill text-primary me-2"></i>
+//                       <strong>{item.title}</strong> - {item.desc}
+//                     </li>
+//                   ))
+//                 )}
+//               </ul>
+//             </div>
+//           </div>
+//         </div>
+        
+//         {/* Call to Action */}
+//         <BubbleSectionTechnology />
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default TechnologySection;
+
+
+ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { API_BASE_URL } from '../../api/config/apiConfig'; 
 import 'animate.css';
@@ -366,6 +819,96 @@ const TechnologyCardSkeleton = () => {
   );
 };
 
+// Technology Modal Component
+const TechnologyModal = ({ tech, isOpen, onClose }) => {
+  if (!isOpen || !tech) return null;
+
+  return (
+    <div 
+      className="modal fade show" 
+      style={{ 
+        display: 'block',
+        backgroundColor: 'rgba(0,0,0,0.5)',
+        zIndex: 1050
+      }}
+      onClick={onClose}
+    >
+      <div 
+        className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="modal-content animate__animated animate__zoomIn animate__faster">
+          <div className="modal-header border-0" style={{
+            background: 'linear-gradient(135deg, rgba(236,72,153,0.1), rgba(124,58,237,0.1))'
+          }}>
+            <div className="d-flex align-items-center">
+              <img 
+                src={tech.image} 
+                alt={tech.tech_name}
+                className="me-3"
+                style={{ 
+                  height: '50px',
+                  width: '50px',
+                  objectFit: 'contain'
+                }}
+              />
+              <div>
+                <h4 className="modal-title mb-1">{tech.tech_name}</h4>
+                <span className="badge bg-primary">{tech.category}</span>
+              </div>
+            </div>
+            <button 
+              type="button" 
+              className="btn-close" 
+              onClick={onClose}
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="modal-body">
+            <div 
+              className="technology-content"
+              dangerouslySetInnerHTML={{ __html: tech.description }}
+              style={{
+                lineHeight: '1.6',
+                fontSize: '16px',
+                color: '#495057'
+              }}
+            />
+          </div>
+          <div className="modal-footer border-0 bg-light">
+            <button 
+              type="button" 
+              className="btn btn-secondary" 
+              onClick={onClose}
+            >
+              Close
+            </button>
+            {/* <button 
+              type="button" 
+              className="btn"
+              style={{
+                background: 'linear-gradient(90deg, #ec4899, #7c3aed)',
+                color: 'white',
+                border: 'none'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 4px 12px rgba(124,58,237,0.3)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = 'none';
+              }}
+            >
+              Get Started with {tech.tech_name}
+            </button> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const TechnologySection = () => {
   const [technologies, setTechnologies] = useState([]);
   const [activeCategory, setActiveCategory] = useState('all');
@@ -375,7 +918,8 @@ const TechnologySection = () => {
   const [categories, setCategories] = useState([
     { id: 'all', name: 'All Technologies' }
   ]);
-  const [expandedTech, setExpandedTech] = useState(null);
+  const [selectedTech, setSelectedTech] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
   // Fetch technologies from API
   useEffect(() => {
@@ -422,7 +966,7 @@ const TechnologySection = () => {
     return () => clearTimeout(timer);
   }, [activeCategory]);
   
-  // Add CSS for skeleton animation
+  // Add CSS for skeleton animation and modal
   useEffect(() => {
     const styleSheet = document.createElement("style");
     styleSheet.innerText = `
@@ -439,6 +983,7 @@ const TechnologySection = () => {
       
       .tech-card-hover {
         transition: all 0.4s ease;
+        cursor: pointer;
       }
       
       .tech-card-hover:hover {
@@ -471,15 +1016,62 @@ const TechnologySection = () => {
         border: 1px solid #dee2e6;
       }
       
-      .tech-description {
-        max-height: 0;
+      /* Modal Styles */
+      .modal-content {
+        border: none;
+        border-radius: 15px;
         overflow: hidden;
-        transition: max-height 0.4s ease-out;
       }
       
-      .tech-description.expanded {
-        max-height: 500px;
-        transition: max-height 0.6s ease-in;
+      .modal-header {
+        padding: 1.5rem;
+      }
+      
+      .modal-body {
+        padding: 1.5rem;
+        max-height: 60vh;
+        overflow-y: auto;
+      }
+      
+      .modal-footer {
+        padding: 1rem 1.5rem;
+      }
+      
+      .technology-content h1,
+      .technology-content h2,
+      .technology-content h3,
+      .technology-content h4,
+      .technology-content h5,
+      .technology-content h6 {
+        color: #2d3748;
+        margin-bottom: 0.75rem;
+        margin-top: 1.5rem;
+      }
+      
+      .technology-content p {
+        margin-bottom: 1rem;
+      }
+      
+      .technology-content ul,
+      .technology-content ol {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+      }
+      
+      .technology-content li {
+        margin-bottom: 0.5rem;
+      }
+      
+      .technology-content strong {
+        color: #2d3748;
+      }
+      
+      .technology-content code {
+        background-color: #f7fafc;
+        padding: 2px 6px;
+        border-radius: 4px;
+        color: #e53e3e;
+        font-size: 0.9em;
       }
     `;
     document.head.appendChild(styleSheet);
@@ -489,6 +1081,19 @@ const TechnologySection = () => {
     };
   }, []);
   
+  // Handle body scroll when modal is open
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen]);
+  
   // Filter technologies based on active category
   const filteredTechnologies = activeCategory === 'all' 
     ? technologies 
@@ -497,13 +1102,16 @@ const TechnologySection = () => {
         return techCategory === activeCategory;
       });
   
-  // Toggle expanded tech card
-  const toggleTechExpand = (techId) => {
-    if (expandedTech === techId) {
-      setExpandedTech(null);
-    } else {
-      setExpandedTech(techId);
-    }
+  // Open modal with selected technology
+  const openTechModal = (tech) => {
+    setSelectedTech(tech);
+    setIsModalOpen(true);
+  };
+  
+  // Close modal
+  const closeTechModal = () => {
+    setIsModalOpen(false);
+    setTimeout(() => setSelectedTech(null), 300); // Delay to allow animation
   };
   
   // Custom CSS for animations and hover effects
@@ -520,8 +1128,6 @@ const TechnologySection = () => {
     checklistItemHoverActive: {
       transform: 'translateX(10px)',
       color: '#0d6efd',
-      // background: linear-gradient(to left, #6917B4 0%, #D54BE1 100%),
-      // background: 'linear-gradient(to left, #6917B4 0%, #D54BE1 100%)',
     }
   };
   
@@ -589,7 +1195,7 @@ const TechnologySection = () => {
                   className={`col animate__animated ${animateCards ? 'animate__fadeIn' : ''}`}
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="card h-100 shadow-sm border-0 tech-card-hover overflow-hidden">
+                  <div className="card h-100 shadow-sm border-0 tech-card-hover">
                     <div className="position-relative p-3">
                       <img 
                         src={tech.image} 
@@ -610,19 +1216,10 @@ const TechnologySection = () => {
                       
                       <button 
                         className="btn btn-sm expand-button mt-2 mb-3"
-                        onClick={() => toggleTechExpand(tech.id)}
+                        onClick={() => openTechModal(tech)}
                       >
-                        {expandedTech === tech.id ? 'Show Less' : 'Learn More'}
+                        See More
                       </button>
-                      
-                      <div className={`tech-description ${expandedTech === tech.id ? 'expanded' : ''}`}>
-                        <hr className="my-2" />
-                        <div 
-                          className="card-text text-muted small text-start" 
-                          dangerouslySetInnerHTML={{ __html: tech.description }}
-                        >
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -637,84 +1234,8 @@ const TechnologySection = () => {
         
         {/* Technology Expertise */}
         <div className="row mt-5 pt-4">
-          <div className="col-md-6 animate__animated animate__fadeInLeft">
-            <div className="p-4 bg-white rounded shadow">
-              <h3 className="h4 mb-4">Our Technical Expertise</h3>
-              
-              {loading ? (
-                // Skeleton for expertise bars
-                Array(5).fill(0).map((_, index) => (
-                  <div className="mb-4" key={`expertise-skeleton-${index}`}>
-                    <div className="d-flex justify-content-between mb-1">
-                      <div style={{ 
-                        height: '18px', 
-                        width: '40%', 
-                        background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
-                        backgroundSize: '200% 100%',
-                        animation: 'skeleton-loading 1.5s infinite' 
-                      }}></div>
-                      <div style={{ 
-                        height: '18px', 
-                        width: '10%', 
-                        background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
-                        backgroundSize: '200% 100%',
-                        animation: 'skeleton-loading 1.5s infinite' 
-                      }}></div>
-                    </div>
-                    <div className="progress" style={{ height: '8px', backgroundColor: '#e9ecef' }}>
-                      <div 
-                        style={{ 
-                          width: '100%', 
-                          background: 'linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)',
-                          backgroundSize: '200% 100%',
-                          animation: 'skeleton-loading 1.5s infinite' 
-                        }}
-                        role="progressbar" 
-                        aria-valuenow="0" 
-                        aria-valuemin="0" 
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                categories
-                  .filter(cat => cat.id !== 'all')
-                  .slice(0, 5)
-                  .map((category, index) => {
-                    // Calculate percentage based on number of techs in each category
-                    const categoryTechs = technologies.filter(
-                      tech => tech.category.toLowerCase().replace(/\s+/g, '-') === category.id
-                    );
-                    const percentage = Math.min(75 + (categoryTechs.length * 5), 95);
-                    
-                    // Define a list of bootstrap colors for variety
-                    const colors = ['primary', 'success', 'info', 'warning', 'danger'];
-                    
-                    return (
-                      <div className="mb-4" key={category.id}>
-                        <div className="d-flex justify-content-between mb-1">
-                          <span>{category.name}</span>
-                          <span>{percentage}%</span>
-                        </div>
-                        <div className="progress" style={{ height: '8px' }}>
-                          <div 
-                            className={`progress-bar bg-${colors[index % colors.length]} progress-bar-striped progress-bar-animated`}
-                            role="progressbar" 
-                            style={{ ...styles.progressBarAnimation, width: `${percentage}%` }} 
-                            aria-valuenow={percentage}
-                            aria-valuemin="0" 
-                            aria-valuemax="100"
-                          ></div>
-                        </div>
-                      </div>
-                    );
-                  })
-              )}
-            </div>
-          </div>
-          <div className="col-md-6 animate__animated animate__fadeInRight">
-            <div className="p-4 bg-white rounded shadow h-100">
+          <div className="col-md-12 animate__animated ">
+            <div className="p-4 bg-white rounded shadow h-100  ">
               <h3 className="h4 mb-4">Why Choose Our Technology Stack?</h3>
               <ul className="list-group list-group-flush">
                 {loading ? (
@@ -742,7 +1263,7 @@ const TechnologySection = () => {
                   ))
                 ) : (
                   [
-                    { title: 'Scalable Solutions', desc: 'Our tech stack ensures your application can grow with your business' },
+                    { title: 'Scalable Solutions', desc: 'Our tech stack ensures your application can grow with your business ' },
                     { title: 'Performance Optimized', desc: 'We build with performance in mind from day one' },
                     { title: 'Security Focused', desc: 'We implement industry best practices for secure applications' },
                     { title: 'Modern Frameworks', desc: 'We use cutting-edge technologies that are future-proof' },
@@ -773,6 +1294,13 @@ const TechnologySection = () => {
         {/* Call to Action */}
         <BubbleSectionTechnology />
       </div>
+      
+      {/* Technology Modal */}
+      <TechnologyModal 
+        tech={selectedTech}
+        isOpen={isModalOpen}
+        onClose={closeTechModal}
+      />
     </section>
   );
 };

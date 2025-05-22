@@ -15,7 +15,7 @@ const TechnologyPage = (props) => {
     return (
         <Fragment>
             <Navbar />
-            <PageTitle pageTitle={'Careers'} pagesub={'Careers'} />
+            <PageTitle pageTitle={'Technology'} pagesub={'Technology'} />
             {/* <Mission sClass={'style-two margin-top'}/> */}
             
             <TechnologySection />

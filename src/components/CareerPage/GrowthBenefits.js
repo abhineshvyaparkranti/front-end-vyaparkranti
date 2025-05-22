@@ -570,11 +570,11 @@ const GrowthBenefits = () => {
         )}
 
         {/* Call to Action */}
-        <div className="gb-cta-container text-center mt-5">
+        {/* <div className="gb-cta-container text-center mt-5">
           <h3 className="gb-cta-title">Ready to grow with us?</h3>
           <p className="gb-cta-text">Join our team and build your career while making an impact</p>
           <button className="gb-cta-button">Explore Openings</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

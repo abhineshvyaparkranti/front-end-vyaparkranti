@@ -29,14 +29,14 @@ const BlogPageSec = (props) => {
                                         </div>
                                         <div className="lower-content">
                                             <ul className="post-meta">
-                                                <li><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}><span className="icon fa fa-user"></span> {blog.author}</Link></li>
-                                                <li><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}><span className="icon fa fa-calendar"></span> {blog.create_at}</Link></li>
+                                                <li><Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}><span className="icon fa fa-user"></span> {blog.author}</Link></li>
+                                                <li><Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}><span className="icon fa fa-calendar"></span> {blog.create_at}</Link></li>
                                             </ul>
-                                            <h4><Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>{blog.title}</Link></h4>
+                                            <h4><Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>{blog.title}</Link></h4>
                                             <div className="text">It has survived not only five centuries, but also the leap into electronic typesetting. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</div>
                                             <div className="btn-box">
                                                 <div className="btn-box-inner">
-                                                    <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`} className="theme-btn btn-style-five"><span className="txt">Learn More</span></Link>
+                                                    <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`} className="theme-btn btn-style-five"><span className="txt">Learn More</span></Link>
                                                 </div>
                                             </div>
                                         </div>

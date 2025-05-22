@@ -68,6 +68,7 @@
   }
   
   .cfm-contact-modal .form-control {
+    height: 40px;
     padding: 12px 15px;
     border-radius: 5px;
     border: 1px solid #ced4da;

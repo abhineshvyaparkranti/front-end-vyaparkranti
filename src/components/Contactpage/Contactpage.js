@@ -359,11 +359,11 @@ useEffect(() => {
                                 </div>
                             </div>
 
-                             <div className="column col-lg-6 col-md-6 col-sm-12">
+                             {/* <div className="column col-lg-6 col-md-6 col-sm-12">
                                 <div className="info-box">
                                     <div className="box-inner">
                                         <div className="icon flaticon-pin"></div>
-                                        {/* 13005 Greenville Avenue <br /> California, TX 70240 */}
+                                        
 
                                         {loading ? (
                                                 <Skeleton width={150} height={50} />
@@ -374,7 +374,7 @@ useEffect(() => {
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Socials from team_info[0] as an example */}
                             {/* {aboutData && aboutData.team_info?.length > 0 && (

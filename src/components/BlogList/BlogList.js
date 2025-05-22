@@ -150,7 +150,7 @@
 //                                                 <div className="overlay-box">
 //                                                     <div className="overlay-inner">
 //                                                         <div className="content">
-//                                                             <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`} className="icon flaticon-unlink"></Link>
+//                                                             <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`} className="icon flaticon-unlink"></Link>
 //                                                         </div>
 //                                                     </div>
 //                                                 </div>
@@ -158,18 +158,18 @@
 //                                             <div className="lower-content">
 //                                                 <ul className="post-meta">
 //                                                     <li>
-//                                                         <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>
+//                                                         <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>
 //                                                             <span className="icon fa fa-user"></span> Admin
 //                                                         </Link>
 //                                                     </li>
 //                                                     <li>
-//                                                         <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>
+//                                                         <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>
 //                                                             <span className="icon fa fa-calendar"></span> {formatDate(blog.blog_date || blog.created_at)}
 //                                                         </Link>
 //                                                     </li>
 //                                                 </ul>
 //                                                 <h5>
-//                                                     <Link onClick={ClickHandler} to={`/blog-single/${blog.slug}`}>
+//                                                     <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>
 //                                                         {blog.title}
 //                                                     </Link>
 //                                                 </h5>
@@ -357,7 +357,7 @@
 //                                                         <div className="content">
 //                                                             <Link 
 //                                                                 onClick={ClickHandler} 
-//                                                                 to={`/blog-single/${blog.id}`} 
+//                                                                 to={`/blog-details/${blog.id}`} 
 //                                                                 className="icon flaticon-unlink"
 //                                                             ></Link>
 //                                                         </div>
@@ -367,18 +367,18 @@
 //                                             <div className="lower-content">
 //                                                 <ul className="post-meta">
 //                                                     <li>
-//                                                         <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>
+//                                                         <Link onClick={ClickHandler} to={`/blog-details/${blog.id}`}>
 //                                                             <span className="icon fa fa-user"></span> Admin
 //                                                         </Link>
 //                                                     </li>
 //                                                     <li>
-//                                                         <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>
+//                                                         <Link onClick={ClickHandler} to={`/blog-details/${blog.id}`}>
 //                                                             <span className="icon fa fa-calendar"></span> {formatDate(blog.blog_date || blog.created_at)}
 //                                                         </Link>
 //                                                     </li>
 //                                                 </ul>
 //                                                 <h5>
-//                                                     <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>
+//                                                     <Link onClick={ClickHandler} to={`/blog-details/${blog.id}`}>
 //                                                         {blog.title}
 //                                                     </Link>
 //                                                 </h5>
@@ -624,7 +624,7 @@ const BlogList = (props) => {
                             ) : (
                                 // Show actual blog posts
                                 blogs.map((blog, index) => {
-                                    const blogId = blog.id || index;
+                                    const blogId = blog.slug || index;
                                     const imageSrc = getImageSrc(blog);
                                     
                                     return (
@@ -671,7 +671,7 @@ const BlogList = (props) => {
                                                             <div className="content">
                                                                 <Link 
                                                                     onClick={ClickHandler} 
-                                                                    to={`/blog-single/${blog.id}`} 
+                                                                    to={`/blog-details/${blog.slug}`} 
                                                                     className="icon flaticon-unlink"
                                                                 ></Link>
                                                             </div>
@@ -681,18 +681,18 @@ const BlogList = (props) => {
                                                 <div className="lower-content">
                                                     <ul className="post-meta">
                                                         <li>
-                                                            <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>
+                                                            <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>
                                                                 <span className="icon fa fa-user"></span> Admin
                                                             </Link>
                                                         </li>
                                                         <li>
-                                                            <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>
+                                                            <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>
                                                                 <span className="icon fa fa-calendar"></span> {formatDate(blog.blog_date || blog.created_at)}
                                                             </Link>
                                                         </li>
                                                     </ul>
                                                     <h5>
-                                                        <Link onClick={ClickHandler} to={`/blog-single/${blog.id}`}>
+                                                        <Link onClick={ClickHandler} to={`/blog-details/${blog.slug}`}>
                                                             {blog.title}
                                                         </Link>
                                                     </h5>
