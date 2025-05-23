@@ -167,6 +167,7 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { API_BASE_URL } from '../../api/config/apiConfig';
 import AuthorWidget from './AuthorWidget';
+import ContactFormModalTwo from '../ContactFormModal/ConatctFormModalTwo';
 
 const BlogSidebar = (props) => {
     const [blogs, setBlogs] = useState([]);
@@ -318,6 +319,7 @@ const BlogSidebar = (props) => {
     };
 
     return (
+        <> 
         <div className={`sidebar-side col-lg-4 col-md-12 col-sm-12 ${props.blLeft}`}>
             <aside className="sidebar sticky-top">
                 {/* Categories */}
@@ -352,7 +354,10 @@ const BlogSidebar = (props) => {
                 </div> */}
                 <AuthorWidget />
             </aside>
+            <ContactFormModalTwo />
         </div>
+         
+        </>
     );
 };
 

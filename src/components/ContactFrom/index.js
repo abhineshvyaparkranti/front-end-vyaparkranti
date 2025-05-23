@@ -123,10 +123,12 @@
 // export default ContactForm;
 
 
-import React, { useState } from 'react';
+import React, { useState,  useEffect } from 'react';
 import SimpleReactValidator from 'simple-react-validator';
 import { API_BASE_URL } from '../../api/config/apiConfig'; 
 import axios from 'axios';
+import { Form, Button, Alert, ListGroup } from 'react-bootstrap';
+
 
 const ContactForm = () => {
     const [forms, setForms] = useState({
@@ -145,6 +147,41 @@ const ContactForm = () => {
     const MESSAGE = "message";
     const SUBJECT = "subject";
     const IP_ADDRESS = "ip_address";
+
+
+    const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, answer: 0 });
+      const [captchaInput, setCaptchaInput] = useState('');
+      const [captchaError, setCaptchaError] = useState('');
+    
+      // Generate random captcha
+      const generateCaptcha = () => {
+        const num1 = Math.floor(Math.random() * 10) + 1;
+        const num2 = Math.floor(Math.random() * 10) + 1;
+        const answer = num1 + num2;
+        setCaptcha({ num1, num2, answer });
+        setCaptchaInput('');
+        setCaptchaError('');
+      };
+    
+    //   const handleChange = (e) => {
+    //     const { name, value } = e.target;
+    //     setFormData(prev => ({ ...prev, [name]: value }));
+    //   };
+    
+      const handleCaptchaChange = (e) => {
+        setCaptchaInput(e.target.value);
+        setCaptchaError('');
+      };
+    
+      const validateCaptcha = () => {
+        const userAnswer = parseInt(captchaInput);
+        if (isNaN(userAnswer) || userAnswer !== captcha.answer) {
+          setCaptchaError('Incorrect answer. Please try again.');
+          generateCaptcha();
+          return false;
+        }
+        return true;
+      };
     
     const [validator] = useState(new SimpleReactValidator({
         className: 'errorMessage'
@@ -161,6 +198,8 @@ const ContactForm = () => {
 
     const submitHandler = async (e) => {
     e.preventDefault();
+     // Step 2: Validate captcha
+  if (!validateCaptcha()) return;
 
     if (validator.allValid()) {
         try {
@@ -210,6 +249,13 @@ const ContactForm = () => {
         validator.showMessages();
     }
 };
+
+const refreshCaptcha = () => generateCaptcha();
+
+  // Generate a new captcha when component mounts
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
 
 
     return (
@@ -295,6 +341,47 @@ const ContactForm = () => {
                     </textarea>
                     {validator.message('message', forms.message, 'required')}
                 </div>
+                {/* Captcha Section */}
+            <Form.Group className="mb-3">
+              <Form.Label>Captcha*</Form.Label>
+              <div 
+                style={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '10px',
+                  padding: '10px',
+                //   backgroundColor: '#f8f9fa',
+                //   border: '1px solid #dee2e6',
+                  borderRadius: '4px'
+                }}
+              >
+                <span style={{ fontSize: '18px', fontWeight: 'bold' }}>
+                  {captcha.num1} + {captcha.num2} = ?
+                </span>
+                <Form.Control
+                  type="number"
+                  value={captchaInput}
+                  onChange={handleCaptchaChange}
+                  placeholder="Answer"
+                  style={{ width: ' 104px' }}
+                  required
+                />
+                <Button 
+                  variant="outline-secondary" 
+                  size="sm" 
+                  onClick={refreshCaptcha}
+                  type="button"
+                  title="Refresh Captcha"
+                >
+                  🔄
+                </Button>
+              </div>
+              {captchaError && (
+                <div style={{ color: 'red', fontSize: '14px', marginTop: '5px' }}>
+                  {captchaError}
+                </div>
+              )}
+            </Form.Group>
 
                 <div className="col-lg-12 col-md-12 col-sm-12 text-center form-group">
                     <button 

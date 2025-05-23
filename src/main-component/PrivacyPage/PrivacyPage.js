@@ -12,50 +12,54 @@ const PrivacyPage = (props) => {
             <Navbar />
             <PageTitle pageTitle={'Privacy Policy'} pagesub={'Privacy Policy'} />
             <section className="privacy-section">
-                <div className="auto-container">
-                    <div className="privacy-content">
-                        <h2>Privacy Policy</h2>
-                        <p>For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other who we know will help us create added value for your project.</p>
-                        <div className="date">Updated January 10, 2021</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue.</p>
-                        <h2>Overview</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                    </div>
-                    <div className="privacy-content">
-                        <h4>We know how important customer experience is for a busines and therefore, <br/> we trive to make your company excel in this.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla. Etiam maximus porttitor magna sit amet consectetur. Integer eget ante scelerisque tortor sodales aliquet. Integer in vestibulum leo, vitae tristique orci. Etiam tortor sem, porttitor at pellentesque sit amet, fringilla nec massa. Nunc nec magna sed metus tristique ornare vitae ut nisl. Mauris lacus enim, posuere et tincidunt condimentum, sodales ac elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla. Etiam maximus porttitor magna sit amet consectetur. Integer eget ante scelerisque tortor sodales aliquet. Integer in vestibulum leo, vitae tristique orci. Etiam tortor </p>
-                    </div>
-                    <div className="privacy-content">
-                        <h4>We take a consultative approach to every client engagement and find actionable <br/> solutions that will help your organization achieve the best outcomes.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut.</p>
-                        <ul className="privacy-list">
-                            <li>SEO for Small Business</li>
-                            <li>SEO for Local Services</li>
-                            <li>Enterprise SEO</li>
-                            <li>National SEO</li>
-                        </ul>
-                    </div>
+    <div className="auto-container">
+        <div className="privacy-content">
+            <h2>Privacy Policy</h2>
+            <p>At Vyapar Kranti, we are committed to protecting your privacy. This policy outlines how we handle your data, ensuring it remains secure and used only for its intended purpose. Our practices align with the highest standards of data protection.</p>
+            <div className="date">Updated May 23, 2025</div>
+            <p>We collect only the necessary information to provide our services effectively, including web development, digital marketing, and IT consulting. Data is stored securely and used solely to enhance our services and communication with clients.</p>
+            <p>Your information is never sold or shared with third parties without your consent, except where required by law. We use modern security technologies to ensure data integrity and confidentiality.</p>
+            <h2>Overview</h2>
+            <p>Vyapar Kranti offers a suite of IT solutions tailored for businesses of all sizes. From custom software development to e-commerce solutions and cloud services, we help clients digitize operations and grow efficiently. This privacy policy ensures that as you grow with us, your trust is protected.</p>
+        </div>
 
-                    <div className="privacy-content">
-                        <h4>Our campaigns get your business in front of the right people at the <br/> right time to increase organic traffic and boost engagement.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla. Etiam maximus porttitor magna sit amet consectetur. Integer eget ante scelerisque tortor sodales aliquet. Integer in vestibulum leo, vitae tristique orci. Etiam tortor sem, porttitor at pellentesque sit amet, fringilla nec massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum.</p>
-                    </div>
-                    <div className="privacy-content">
-                        <h2>Security and Retention</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla.</p>
-                    </div>
-                    <div className="privacy-content">
-                        <h2>Contact Us</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula.</p>
-                    </div>
+        <div className="privacy-content">
+            <h4>Client-Centric Solutions for Modern Businesses</h4>
+            <p>We prioritize your digital journey by offering scalable and flexible IT solutions. Our team ensures seamless communication, transparent processes, and custom strategies tailored to meet your specific business goals.</p>
+            <p>We understand how valuable your time and trust are, which is why we invest in technology that improves user experience, data transparency, and support responsiveness. Our client relationships are built on clarity and mutual growth.</p>
+            <p>Your data may be used for account management, customer support, service updates, and internal analytics, all aimed at enhancing your experience and outcomes.</p>
+        </div>
 
-                </div>
-            </section>
+        <div className="privacy-content">
+            <h4>Consultative Approach to IT Services</h4>
+            <p>Every engagement begins with a thorough understanding of your business objectives. Our IT consultants provide actionable strategies that align technology with your goals, ensuring sustainable growth and operational efficiency.</p>
+            <p>Whether it's website design, digital marketing, or software deployment, we use your input to create solutions that drive results while maintaining data privacy and compliance.</p>
+            <ul className="privacy-list">
+                <li>Custom Web Development</li>
+                <li>Search Engine Optimization (SEO)</li>
+                <li>Digital Marketing Campaigns</li>
+                <li>Business Process Automation</li>
+            </ul>
+        </div>
+
+        <div className="privacy-content">
+            <h4>Smart Campaigns That Drive Results</h4>
+            <p>Our digital marketing strategies are data-driven and results-oriented. We target the right audience using ethical SEO practices, paid advertising, and content marketing that respects user privacy and adheres to platform guidelines.</p>
+            <p>We ensure campaign performance data is used solely to improve marketing effectiveness and is never shared externally. All marketing tools are configured with privacy-first settings.</p>
+        </div>
+
+        <div className="privacy-content">
+            <h2>Security and Data Retention</h2>
+            <p>Vyapar Kranti uses secure servers, encryption, and firewall protection to keep your data safe. We retain information only as long as necessary to fulfill our services, or as required by applicable laws. Regular audits ensure our security protocols remain effective and up-to-date.</p>
+        </div>
+
+        <div className="privacy-content">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or your personal data, please contact us at <a href="mailto:sales@vyaparkranti.com">sales@vyaparkranti.com</a>. We are happy to clarify our practices and ensure your concerns are addressed promptly and respectfully.</p>
+        </div>
+    </div>
+</section>
+
             <Footer />
             <Scrollbar />
         </Fragment>

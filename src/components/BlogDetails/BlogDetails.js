@@ -351,7 +351,7 @@ const BlogSingle = () => {
                                         <div className="column col-lg-6 col-md-6 col-sm-12">
                                             <div className="image"><img src={blog.image} alt="" /></div>
                                         </div> */}
-                                       {JSON.parse(blog.blog_images).map((img, index) => (
+                                       {/* {JSON.parse(blog.blog_images).map((img, index) => (
                                         <div className="col-lg-6 col-md-6 col-sm-12 mb-4" key={index}>
                                             <div className="ratio ratio-4x3">
                                             <img
@@ -363,7 +363,7 @@ const BlogSingle = () => {
                                             />
                                             </div>
                                         </div>
-                                        ))}
+                                        ))} */}
 
 
                                     </div>

@@ -41,6 +41,7 @@ import Dashboard from '../../components/Dashboard/Dashboard';
 import GalleryPage from '../GalleryPage/GalleryPage';
 import ContactFormModal from '../../components/ContactFormModal/ContactFormModal';
 import TechnologyPage from '../TechnologyPage/TechnologyPage';
+import RefundPolicy from '../TermPage/RefundPolicy';
 // import Faq from '../../components/Faq/Faq';
 // import PricingSinglePage from '../../components/Pricing/PricingSinglePage';
 
@@ -73,6 +74,7 @@ const AllRoute = () => {
           <Route path="testimonial" element={<TestimonialPage />} />
           <Route path="faq" element={<FaqPage />} />
           <Route path="terms" element={<TermPage />} />
+           <Route path="refund" element={<RefundPolicy />} />
           <Route path="privacy" element={<PrivacyPage />} />
           <Route path="comming-soon" element={<ComingSoon />} />
           <Route path='shopping-cart' element={<CartPage />} />

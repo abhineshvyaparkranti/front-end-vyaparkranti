@@ -259,38 +259,103 @@ const ContactFormModal = ({ show, handleClose, autoShow = true, delay = 15000 })
     return true;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
     
-    // Validate captcha first
-    if (!validateCaptcha()) {
-      return;
-    }
+  //   // Validate captcha first
+  //   if (!validateCaptcha()) {
+  //     return;
+  //   }
 
-    try {
-      const payload = {
-        name: formData.name,
-        location: formData.location,
-        email: formData.email,
-        phone: formData.phone,
-        message: formData.message,
-      };
+  //   try {
+  //     const payload = {
+  //       name: formData.name,
+  //       location: formData.location,
+  //       email: formData.email,
+  //       phone: formData.phone,
+  //       message: formData.message,
+  //     };
 
-      // Send form data to the backend API via POST request
-      const response = await axios.post(`${API_BASE_URL}/api/save-quotes`, payload);
+  //     // Send form data to the backend API via POST request
+  //     const response = await axios.post(`${API_BASE_URL}/api/save-quotes`, payload);
 
-      console.log("Request a quote submitted form ==============>:", response.data);
+  //     console.log("Request a quote submitted form ==============>:", response.data);
 
-      // Show thank you message
-      setSubmitted(true);
+  //     // Show thank you message
+  //     setSubmitted(true);
 
-      // Close modal after showing thank you message
-      setTimeout(closeModal, 3000);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Something went wrong while submitting. Please try again.");
-    }
-  };
+  //     // Close modal after showing thank you message
+  //     setTimeout(closeModal, 3000);
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     alert("Something went wrong while submitting. Please try again.");
+  //   }
+  // };
+
+   const validateFormData = () => {
+  const { name, location, phone, message } = formData;
+
+  if (!name.trim()) {
+    alert("Please enter your name.");
+    return false;
+  }
+
+  if (!location.trim()) {
+    alert("Please enter your location.");
+    return false;
+  }
+
+  if (!phone.trim() || !/^\+?\d{7,15}$/.test(phone)) {
+    alert("Please enter a valid phone number.");
+    return false;
+  }
+
+  // if (!email.trim() || !/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
+  //   alert("Please enter a valid email address.");
+  //   return false;
+  // }
+
+  if (!message.trim()) {
+    alert("Please enter a message.");
+    return false;
+  }
+
+  return true;
+};
+
+
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  // Step 1: Validate form fields
+  if (!validateFormData()) return;
+
+  // Step 2: Validate captcha
+  if (!validateCaptcha()) return;
+
+  try {
+    const payload = {
+      name: formData.name,
+      location: formData.location,
+      // email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+    };
+
+    const response = await axios.post(`${API_BASE_URL}/api/save-quotes`, payload);
+    console.log("Request a quote submitted:", response.data);
+
+    setSubmitted(true);
+    setFormData({ name: '', location: '', phone: '', message: '' });
+    generateCaptcha();
+
+    setTimeout(() => setSubmitted(false), 3000);
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    alert("Something went wrong while submitting. Please try again.");
+  }
+};
+
 
   const refreshCaptcha = () => {
     generateCaptcha();
@@ -379,7 +444,7 @@ const ContactFormModal = ({ show, handleClose, autoShow = true, delay = 15000 })
 
             {/* Captcha Section */}
             <Form.Group className="mb-3">
-              <Form.Label>Security Check</Form.Label>
+              <Form.Label>Captcha*</Form.Label>
               <div 
                 style={{ 
                   display: 'flex', 

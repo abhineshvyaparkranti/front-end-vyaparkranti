@@ -11,52 +11,56 @@ const TermPage = (props) => {
         <Fragment>
             <Navbar />
             <PageTitle pageTitle={'Terms & Coditions'} pagesub={'Terms & Coditions'} />
-            <section className="privacy-section">
-                <div className="auto-container">
-                    <div className="privacy-content">
-                        <h2>Terms & Condition</h2>
-                        <p>For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other who we know will help us create added value for your project.</p>
-                        <div className="date">Updated January 10, 2021</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue.</p>
-                        <h2>Overview</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
-                    </div>
-                    <div className="privacy-content">
-                        <h4>We know how important customer experience is for a busines and therefore, <br/> we trive to make your company excel in this.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla. Etiam maximus porttitor magna sit amet consectetur. Integer eget ante scelerisque tortor sodales aliquet. Integer in vestibulum leo, vitae tristique orci. Etiam tortor sem, porttitor at pellentesque sit amet, fringilla nec massa. Nunc nec magna sed metus tristique ornare vitae ut nisl. Mauris lacus enim, posuere et tincidunt condimentum, sodales ac elit.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla. Etiam maximus porttitor magna sit amet consectetur. Integer eget ante scelerisque tortor sodales aliquet. Integer in vestibulum leo, vitae tristique orci. Etiam tortor </p>
-                    </div>
-                    <div className="privacy-content">
-                        <h4>We take a consultative approach to every client engagement and find actionable <br/> solutions that will help your organization achieve the best outcomes.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut.</p>
-                        <ul className="privacy-list">
-                            <li>SEO for Small Business</li>
-                            <li>SEO for Local Services</li>
-                            <li>Enterprise SEO</li>
-                            <li>National SEO</li>
-                        </ul>
-                    </div>
-                    <div className="privacy-content">
-                        <h4>Our campaigns get your business in front of the right people at the <br/> right time to increase organic traffic and boost engagement.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla. Etiam maximus porttitor magna sit amet consectetur. Integer eget ante scelerisque tortor sodales aliquet. Integer in vestibulum leo, vitae tristique orci. Etiam tortor sem, porttitor at pellentesque sit amet, fringilla nec massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum.</p>
-                    </div>
+             <section className="privacy-section">
+    <div className="auto-container">
+        <div className="privacy-content">
+            <h2>Terms & Conditions</h2>
+            <p>At Vyapar Kranti, we are committed to delivering quality IT solutions tailored to meet the dynamic needs of businesses across sectors. These Terms & Conditions govern your use of our services, software, and website. By accessing our site or engaging with our services, you agree to be bound by these terms.</p>
+            <div className="date">Updated May 23, 2025</div>
+            <p>All services provided by Vyapar Kranti are subject to prior consultation, scope definition, and mutual agreement. Custom software, web development, digital marketing, or any IT consultancy services will be delivered as per the agreed timeline and deliverables, and are non-refundable once work has commenced.</p>
+            <p>Client obligations include providing timely feedback, approvals, and content required for project execution. Delays in these responsibilities may affect delivery schedules. Vyapar Kranti shall not be held liable for delays caused by such instances.</p>
 
-                    <div className="privacy-content">
-                        <h2>Security and Retention</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla.</p>
-                    </div>
+            <h2>Overview</h2>
+            <p>Vyapar Kranti provides customized IT services, including website development, software solutions, mobile applications, cloud-based systems, and digital marketing strategies. We reserve the right to modify our service offerings and pricing at any time, with prior notice to our clients where applicable.</p>
+        </div>
 
-                    <div className="privacy-content">
-                        <h2>Contact Us</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula. Suspendisse vitae ex fermentum, suscipit sem id, dapibus orci. Cras efficitur mi augue, ut sodales felis rhoncus bibendum. Fusce sagittis nibh orci, id vestibulum tortor aliquet ut. Vivamus maximus felis ac nisl luctus, ut aliquet massa suscipit. Sed scelerisque quam justo, sed volutpat neque tempor porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam consequat tellus id risus condimentum fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at nisl ligula.</p>
-                    </div>
+        <div className="privacy-content">
+            <h4>We value client relationships and aim to deliver high-performing, scalable digital solutions that drive business growth.</h4>
+            <p>Our approach combines technical excellence with business insight to help clients transform digitally. By leveraging modern frameworks, agile development practices, and cloud-first strategies, we build robust IT systems that align with your business goals.</p>
+            <p>Clients are encouraged to actively participate in the project lifecycle to ensure outcomes match expectations. Clear communication and transparency are integral to our engagement model.</p>
+            <p>We offer service packages for businesses of all sizes—from startups seeking online presence to enterprises in need of advanced system integration and automation.</p>
+        </div>
 
-                </div>
-            </section>
+        <div className="privacy-content">
+            <h4>Our consultative approach ensures each project receives tailored planning, development, and support from our expert team.</h4>
+            <p>Before any engagement, we conduct detailed requirements analysis, offer recommendations, and define deliverables. These are documented in service-level agreements or project contracts that both parties sign before initiation.</p>
+            <p>Vyapar Kranti maintains intellectual property rights over proprietary frameworks, modules, and templates used in project execution unless stated otherwise in a signed agreement.</p>
+            <ul className="privacy-list">
+                <li>Custom Software Development</li>
+                <li>Web & E-commerce Development</li>
+                <li>Mobile App Development</li>
+                <li>Digital Marketing & SEO</li>
+            </ul>
+        </div>
+
+        <div className="privacy-content">
+            <h4>We focus on measurable results that increase visibility, productivity, and ROI for our clients.</h4>
+            <p>Our marketing services target the right audience with SEO, social media, PPC, and content strategies. We ensure your business gains organic visibility and user engagement through consistent optimization and analytics-driven decisions.</p>
+            <p>Service reports, campaign performance, and analytics are regularly shared with clients. We prioritize data security and follow best practices in storing and managing customer information.</p>
+        </div>
+
+        <div className="privacy-content">
+            <h2>Security and Retention</h2>
+            <p>We implement strict security protocols to protect client data. Our team follows industry best practices to ensure system integrity, confidentiality, and uptime. Data retention policies are defined in project agreements and comply with applicable laws.</p>
+        </div>
+
+        <div className="privacy-content">
+            <h2>Contact Us</h2>
+            <p>If you have questions regarding these Terms & Conditions, our services, or a current engagement, you can contact us via our official website at <a href="https://vyaparkranti.com">vyaparkranti.com</a>. We're here to support your business and answer any concerns you may have.</p>
+        </div>
+    </div>
+</section>
+
 
             <Footer />
             <Scrollbar />
