@@ -311,7 +311,7 @@ const PackageComparison = ({ packages, isOpen, toggle, preSelectedPackages = [] 
                                         onClick={() => handlePackageSelection(pkg)}
                                     >
                                         <div className="package-selection-name">{pkg.title}</div>
-                                        <div className="package-selection-price">{pkg.price}</div>
+                                        <div className="package-selection-price">Rs. {pkg.price}</div>
                                     </div>
                                 ))}
                             </div>
@@ -327,7 +327,7 @@ const PackageComparison = ({ packages, isOpen, toggle, preSelectedPackages = [] 
                                                 <th key={pkg.id}>
                                                     <div className="text-center">
                                                         <h5>{pkg.title}</h5>
-                                                        <div className="price">{pkg.price}</div>
+                                                        <div className="price">Rs. {pkg.price}</div>
                                                         <div className="mb-2">
                                                             <small className="text-muted">({pkg.category} - {pkg.package_class})</small>
                                                         </div>

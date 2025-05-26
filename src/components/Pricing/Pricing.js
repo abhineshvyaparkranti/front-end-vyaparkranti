@@ -1849,7 +1849,7 @@ const Pricing = (props) => {
             <div className={`price-block ${item.active || ''}`}>
                 <div className="inner-box">
                     <div className="title">{item.title}</div>
-                    <div className="price">{item.price}</div>
+                    <div className="price">Rs. {item.price}</div>
                     {/* <ul className="price-list"> 
                         {item.package_details
                             ? item.package_details

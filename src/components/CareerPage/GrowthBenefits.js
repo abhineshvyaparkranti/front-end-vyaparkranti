@@ -436,7 +436,7 @@ const GrowthBenefits = () => {
     <div className="gb-container py-5">
       <div className="container">
         {/* Navigation tabs */}
-        <div className="gb-nav-container text-center mb-5">
+        {/* <div className="gb-nav-container text-center mb-5">
           <div className="gb-tab-wrapper d-inline-flex">
             <button 
               className={`gb-tab-btn ${activeTab === 'growth' ? 'gb-active' : ''}`}
@@ -445,16 +445,16 @@ const GrowthBenefits = () => {
               Career Growth
             </button>
             <button 
-              className={`gb-tab-btn ${activeTab === 'benefits' ? 'gb-active' : ''}`}
+              className={`gb-tab-btn`}
               onClick={() => setActiveTab('benefits')}
             >
               Perks & Benefits
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Growth Paths Section */}
-        {activeTab === 'growth' && (
+        {/* {activeTab === 'growth' && (
           <div className="gb-growth-section">
             <div className="gb-section-title text-center mb-5">
               <h2 className="gb-title">Your Growth Journey</h2>
@@ -484,7 +484,7 @@ const GrowthBenefits = () => {
                           borderTop: `4px solid ${path.color}`
                         }}
                       >
-                        {/* <div className="gb-level-badge">{path.level}</div> */}
+                         
                         
                         {path.imageUrl ? (
                           <div className="gb-benefit-icon-container">
@@ -533,10 +533,10 @@ const GrowthBenefits = () => {
               </div>
             )}
           </div>
-        )}
+        )} */}
 
         {/* Benefits Section */}
-        {activeTab === 'benefits' && (
+        {/* {activeTab === 'benefits' && ( */}
           <div className="gb-benefits-section">
             <div className="gb-section-title text-center mb-5">
               <h2 className="gb-title">Perks & Benefits</h2>
@@ -567,7 +567,7 @@ const GrowthBenefits = () => {
               ))}
             </div>
           </div>
-        )}
+        {/* )} */}
 
         {/* Call to Action */}
         {/* <div className="gb-cta-container text-center mt-5">

@@ -16,7 +16,7 @@ const TermPage = (props) => {
         <div className="privacy-content">
             <h2>Terms & Conditions</h2>
             <p>At Vyapar Kranti, we are committed to delivering quality IT solutions tailored to meet the dynamic needs of businesses across sectors. These Terms & Conditions govern your use of our services, software, and website. By accessing our site or engaging with our services, you agree to be bound by these terms.</p>
-            <div className="date">Updated May 23, 2025</div>
+            {/* <div className="date">Updated May 23, 2025</div> */}
             <p>All services provided by Vyapar Kranti are subject to prior consultation, scope definition, and mutual agreement. Custom software, web development, digital marketing, or any IT consultancy services will be delivered as per the agreed timeline and deliverables, and are non-refundable once work has commenced.</p>
             <p>Client obligations include providing timely feedback, approvals, and content required for project execution. Delays in these responsibilities may affect delivery schedules. Vyapar Kranti shall not be held liable for delays caused by such instances.</p>
 

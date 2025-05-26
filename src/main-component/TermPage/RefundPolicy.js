@@ -16,12 +16,12 @@ const RefundPolicy = (props) => {
         <div className="privacy-content">
             <h2>Refund Policy</h2>
             <p>At Vyapar Kranti, we strive to deliver high-quality IT solutions tailored to your business needs. We take a consultative approach in every project and commit to transparency, value, and trust. Our refund policy is designed to be fair and clear to ensure your satisfaction while respecting the efforts of our expert teams.</p>
-            <div className="date">Updated May 23, 2025</div>
+            {/* <div className="date">Updated May 23, 2025</div> */}
             <p>Clients are eligible for a full or partial refund under the following circumstances:
                 <ul>
                     <li>If the project has not yet started.</li>
                     <li>If the deliverables do not align with the agreed-upon scope and cannot be rectified.</li>
-                    <li>If a cancellation request is made within 7 days of payment and significant resources have not yet been allocated.</li>
+                    {/* <li>If a cancellation request is made within 7 days of payment and significant resources have not yet been allocated.</li> */}
                 </ul>
             </p>
             <p>Refund requests should be sent in writing to our official support channel. Each case will be reviewed individually, and a resolution will be provided within 7 business days.</p>
