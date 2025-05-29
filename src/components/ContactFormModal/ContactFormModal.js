@@ -186,13 +186,21 @@ const ContactFormModal = ({ show, handleClose, autoShow = true, delay = 15000 })
   useEffect(() => {
     let timer;
     
-    if (autoShow && !localStorage.getItem('contactModalShown')) {
+    // if (autoShow && !localStorage.getItem('contactModalShown')) {
+    //   timer = setTimeout(() => {
+    //     setShowModal(true);
+    //     // Mark that modal has been shown in this session
+    //     localStorage.setItem('contactModalShown', 'true');
+    //   }, delay);
+    // }
+    if (autoShow && !sessionStorage.getItem('contactModalShown')) {
       timer = setTimeout(() => {
         setShowModal(true);
-        // Mark that modal has been shown in this session
-        localStorage.setItem('contactModalShown', 'true');
+        // Mark that modal has been shown in this browser session
+        sessionStorage.setItem('contactModalShown', 'true');
       }, delay);
     }
+
 
     return () => {
       if (timer) clearTimeout(timer);

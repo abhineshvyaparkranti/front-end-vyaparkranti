@@ -42,6 +42,7 @@ import GalleryPage from '../GalleryPage/GalleryPage';
 import ContactFormModal from '../../components/ContactFormModal/ContactFormModal';
 import TechnologyPage from '../TechnologyPage/TechnologyPage';
 import RefundPolicy from '../TermPage/RefundPolicy';
+import PaymentPage from '../PaymentPage/PaymentPage';
 // import Faq from '../../components/Faq/Faq';
 // import PricingSinglePage from '../../components/Pricing/PricingSinglePage';
 
@@ -97,6 +98,7 @@ const AllRoute = () => {
           <Route path='/technology' element={<TechnologyPage />} />
           {/* <Route path='/package-page' element={<PricingSinglePage />} /> */}
           <Route path='/package-page' element={<PricingPage />} />
+          <Route path='/payment' element={<PaymentPage />} />
             {/* <Route path='/faq' element={<Faq />} /> */}
 
 

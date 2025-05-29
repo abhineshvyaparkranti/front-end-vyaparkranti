@@ -1196,6 +1196,7 @@ const CheckoutPage = () => {
                                                     </td>
                                                     <td className="sub-total">₹{calculateSubtotal()}</td>
                                                 </tr>
+                                                
                                             ) : (
                                                 <tr>
                                                     <td colSpan="3" align="center">
@@ -1241,59 +1242,92 @@ const CheckoutPage = () => {
                                     }}
                                 >                                         
                                     <span 
-                                        className="col title"
-                                        style={{
-                                            fontWeight: '500',
-                                            color: '#333',
-                                            boxSizing: 'border-box'
-                                        }}
-                                    >
-                                        Cart Subtotal
-                                    </span>                                         
-                                    <span 
-                                        className="col"
-                                        style={{
-                                            fontWeight: '600',
-                                            color: '#666',
-                                            boxSizing: 'border-box'
-                                        }}
-                                    >
-                                        ₹{calculateSubtotal()}
-                                    </span>                                     
-                                </li>                                                                           
-                                <li 
-                                    className="clearfix"
+                                    className="col title"
                                     style={{
-                                        display: 'flex',
-                                        justifyContent: 'space-between',
-                                        alignItems: 'center',
-                                        padding: '12px 16px',
-                                        backgroundColor: '#f0f0f0',
+                                        fontWeight: '500',
+                                        color: '#333',
                                         boxSizing: 'border-box'
                                     }}
-                                >                                         
-                                    <span 
-                                        className="col title"
-                                        style={{
-                                            fontWeight: '600',
-                                            color: '#333',
-                                            fontSize: '16px',
-                                            boxSizing: 'border-box'
-                                        }}
-                                    >
-                                        Order Total
-                                    </span>                                         
-                                    <span 
-                                        className="col total"
-                                        style={{
-                                            fontWeight: '700',
-                                            color: '#2c5aa0',
-                                            fontSize: '18px',
-                                            boxSizing: 'border-box'
-                                        }}
-                                    >
-                                        ₹{calculateSubtotal()}
-                                    </span>                                     
+                                >
+                                    Cart Subtotal
+                                </span>                                         
+                                <span 
+                                    className="col"
+                                    style={{
+                                        fontWeight: '600',
+                                        color: '#666',
+                                        boxSizing: 'border-box'
+                                    }}
+                                >
+                                    ₹{calculateSubtotal()}
+                                </span>                                     
+                            </li>      
+
+                            <li 
+                                className="clearfix"
+                                style={{
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    padding: '12px 16px',
+                                    boxSizing: 'border-box'
+                                }}
+                            >                                         
+                                <span 
+                                    className="col title"
+                                    style={{
+                                        fontWeight: '500',
+                                        color: '#333',
+                                        boxSizing: 'border-box'
+                                    }}
+                                >
+                                    GST (18%)
+                                </span>                                         
+                                <span 
+                                    className="col"
+                                    style={{
+                                        fontWeight: '600',
+                                        color: '#666',
+                                        boxSizing: 'border-box'
+                                    }}
+                                >
+                                    ₹{(calculateSubtotal() * 0.18).toFixed(2)}
+                                </span>                                     
+                            </li>                                                                    
+
+                            <li 
+                                className="clearfix"
+                                style={{
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    padding: '12px 16px',
+                                    backgroundColor: '#f0f0f0',
+                                    boxSizing: 'border-box'
+                                }}
+                            >                                         
+                                <span 
+                                    className="col title"
+                                    style={{
+                                        fontWeight: '600',
+                                        color: '#333',
+                                        fontSize: '16px',
+                                        boxSizing: 'border-box'
+                                    }}
+                                >
+                                    Order Total
+                                </span>                                         
+                                <span 
+                                    className="col total"
+                                    style={{
+                                        fontWeight: '700',
+                                        color: '#2c5aa0',
+                                        fontSize: '18px',
+                                        boxSizing: 'border-box'
+                                    }}
+                                >
+                                    ₹{(calculateSubtotal() * 1.18).toFixed(2)}
+                                </span>                                     
                                 </li>                                 
                             </ul>
 

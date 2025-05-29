@@ -368,15 +368,16 @@ const Footer = (props) => {
                                             ) : (
                                                 <>
                                                     {/* <li><Link onClick={ClickHandler} to="/">Home</Link></li> */}
-                                                    <li><Link onClick={ClickHandler} to="/terms">Terms & Condition</Link></li>
+                                                    {/* <li><Link onClick={ClickHandler} to="/terms">Terms & Condition</Link></li>
                                                     <li><Link onClick={ClickHandler} to="/privacy">Privacy & Policy</Link></li>
-                                                    <li><Link onClick={ClickHandler} to="/refund">Refund Policy</Link></li>
+                                                    <li><Link onClick={ClickHandler} to="/refund">Refund Policy</Link></li> */}
                                                     
                                                     <li><Link onClick={ClickHandler} to="/blog">Blog</Link></li>
                                                     <li><Link onClick={ClickHandler} to="/contact">Help</Link></li>
                                                     <li><Link onClick={ClickHandler} to="/gallery">Gallery</Link></li>
                                                     <li><Link onClick={ClickHandler} to="/careers">Careers</Link></li>
                                                     <li><Link onClick={ClickHandler} to="/faq">FAQ</Link></li>
+                                                     <li><Link onClick={ClickHandler} to="/payment">Pay Now</Link></li>
                                                 </>
                                             )}
                                         </ul>
@@ -408,15 +409,23 @@ const Footer = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="footer-bottom">
-                    <div className="copyright">
-                        {loading ? (
-                            <Skeleton width={300} />
-                        ) : (
-                            <>Copyright © 2025 by <Link onClick={ClickHandler} to="/">Vyapar Kranti</Link>. All Rights Reserved.</>
-                        )}
-                    </div>
+                <div className="footer-bottom" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap' }}>
+                <div className="copyright">
+                {loading ? (
+                    <Skeleton width={300} />
+                ) : (
+                    <>Copyright © 2025 by <Link onClick={ClickHandler} to="/">Vyapar Kranti</Link>. All Rights Reserved.</>
+                )}
                 </div>
+                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                <Link onClick={ClickHandler} to="/terms">Terms & Condition</Link>
+                <span>|</span>
+                <Link onClick={ClickHandler} to="/privacy">Privacy & Policy</Link>
+                <span>|</span>
+                <Link onClick={ClickHandler} to="/refund">Refund Policy</Link>
+                </div>
+                </div>
+
             </div>
         </footer>
     )
