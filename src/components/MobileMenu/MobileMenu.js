@@ -290,6 +290,12 @@ const menus = [
         title: 'Hosting',
         link: '/package-page',
     },
+
+     {
+        id: 9,
+        title: 'Domain',
+        link: '/domain',
+    },
         {
         id: 3,
         title: 'Technology',

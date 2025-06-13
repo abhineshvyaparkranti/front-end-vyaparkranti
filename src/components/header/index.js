@@ -177,6 +177,8 @@ const Header = (props) => {
                                     </li>
                                     <li className="dropdown"><Link onClick={ClickHandler} to="/services">Services</Link> </li>
                                       <li className="dropdown"><Link onClick={ClickHandler} to="/package-page">Hosting</Link> </li>
+                                        <li className="dropdown"><Link onClick={ClickHandler} to="/domain">Domain</Link> </li>
+                                      
                                     {/* <li className="dropdown"><Link onClick={ClickHandler} to="/services">Services</Link>
                                         <ul>
                                             <li><Link onClick={ClickHandler} to="/services">Services</Link></li>

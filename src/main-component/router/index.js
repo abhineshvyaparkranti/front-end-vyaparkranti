@@ -43,6 +43,9 @@ import ContactFormModal from '../../components/ContactFormModal/ContactFormModal
 import TechnologyPage from '../TechnologyPage/TechnologyPage';
 import RefundPolicy from '../TermPage/RefundPolicy';
 import PaymentPage from '../PaymentPage/PaymentPage';
+import DomainPage from '../DomainPage/DomainPage';
+import PaymentSucessPage from '../PaymentSucessPage/PaymentSucessPage';
+import PaymentFailPage from '../PaymentFailPage/PaymentFailPage';
 // import Faq from '../../components/Faq/Faq';
 // import PricingSinglePage from '../../components/Pricing/PricingSinglePage';
 
@@ -98,7 +101,10 @@ const AllRoute = () => {
           <Route path='/technology' element={<TechnologyPage />} />
           {/* <Route path='/package-page' element={<PricingSinglePage />} /> */}
           <Route path='/package-page' element={<PricingPage />} />
+          <Route path='/domain' element={<DomainPage />} />
           <Route path='/payment' element={<PaymentPage />} />
+          <Route path='/laravel/payment/success' element={<PaymentSucessPage />} />
+          <Route path='/laravel/payment/error' element={<PaymentFailPage />} />
             {/* <Route path='/faq' element={<Faq />} /> */}
 
 

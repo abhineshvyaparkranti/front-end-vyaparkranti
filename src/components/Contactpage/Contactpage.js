@@ -245,7 +245,7 @@ useEffect(() => {
                  <section className="contact-form-section">
                 <div className="auto-container">
                     <div className="sec-title centered">
-                        <div className="title">Don’t Hasitate To Contact With us</div>
+                        <div className="title"> </div>
                         <h2>Now Very Easy</h2>
                         <div className="text">
                             Our approach to SEO is uniquely built around what we know works…
